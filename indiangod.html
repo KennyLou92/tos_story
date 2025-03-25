@@ -42,7 +42,6 @@
 	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
 </head>
 <body>
-    <!-- <h1>通行證</h1> -->
 	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
 	<div class="sidebar" id = "sidebar">
 	<a href="https://kennylou92.github.io/tos_story/">🏠 回主頁</a>
@@ -81,11 +80,13 @@
 		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
         <!-- 只要繼續加這行，按鈕會自動換行 -->
     </div>
+    <!-- JavaScript -->
     <script>
-        function toggleSidebar() {
-            var sidebar = document.getElementById("sidebar");
-            sidebar.classList.toggle("active"); // 切換 active 類別
-        }
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector(".sidebar-toggle").addEventListener("click", function() {
+                document.getElementById("sidebar").classList.toggle("active");
+            });
+        });
     </script>
 </body>
 </html>
