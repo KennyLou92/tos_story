@@ -54,12 +54,27 @@
         <!-- 只要繼續加這行，按鈕會自動換行 -->
     </div>
     <!-- JavaScript -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            document.querySelector(".sidebar-toggle").addEventListener("click", function() {
-                document.getElementById("sidebar").classList.toggle("active");
-            });
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
         });
-    </script>
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+
 </body>
 </html>
