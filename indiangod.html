@@ -81,9 +81,10 @@
 		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
         <!-- 只要繼續加這行，按鈕會自動換行 -->
     </div>
-	    <script>
+    <script>
         function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("active");
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active"); // 切換 active 類別
         }
     </script>
 </body>

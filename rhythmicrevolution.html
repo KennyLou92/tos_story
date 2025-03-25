@@ -58,7 +58,8 @@
     </div>
 	<script>
         function toggleSidebar() {
-            document.getElementById("sidebar").classList.toggle("active");
+            var sidebar = document.getElementById("sidebar");
+            sidebar.classList.toggle("active"); // 切換 active 類別
         }
     </script>
 </body>
