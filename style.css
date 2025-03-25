@@ -1,60 +1,39 @@
-/* 側邊欄設計 */
+/* 側邊欄（預設隱藏） */
 .sidebar {
     position: fixed;
-    left: 0;
+    left: -200px; /* 把 sidebar 移出畫面 */
     top: 0;
     width: 200px;
     height: 100%;
     background-color: #333;
     padding-top: 20px;
+    transition: left 0.3s ease-in-out;
 }
 
-.sidebar a {
-    display: block;
+/* 當 sidebar 顯示時 */
+.sidebar.active {
+    left: 0;
+}
+
+/* 側邊欄按鈕 */
+.sidebar-toggle {
+    position: fixed;
+    left: 10px;
+    top: 10px;
+    background-color: #333;
     color: white;
-    text-decoration: none;
-    padding: 15px;
-    text-align: center;
-}
-
-.sidebar a:hover {
-    background-color: #575757;
-}
-
-/* 主要內容區域 */
-.content {
-    margin-left: 220px;
-    padding: 20px;
-}
-
-/* 按鈕區塊 */
-.button-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-    max-width: 500px;
-    margin: 20px auto;
-}
-
-.button-container a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    padding: 10px;
-    width: 80px;
-    background-color: #b1b1b1;
-    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
     border-radius: 5px;
 }
 
-.button-container a:hover {
-    background-color: #292828;
+.sidebar-toggle:hover {
+    background-color: #575757;
 }
 
-.button-container img {
-    width: 50px;
-    height: 50px;
-    margin-bottom: 5px;
+/* 主要內容 */
+.content {
+    margin-left: 20px; /* 保持內容可視，不受 sidebar 影響 */
+    padding: 20px;
 }
