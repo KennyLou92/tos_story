@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>腼腆英雄</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 50px; /* 圖片大小 */
+            height: 50px;
+            margin-bottom: 5px;
+        }
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+    <!-- <h1>通行證</h1> -->
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <div class="sidebar" id = "sidebar">
+    <a href="https://kennylou92.github.io/tos_story/">🏠 回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/standalone.html"><img src = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg' width='50' height='50'><br>獨立系列</a>
+	<a href="https://kennylou92.github.io/tos_story/battlepass.html"><img src = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg' width='50' height='50'><br>通行證</a>
+	</div>
+    <div class="button-container">
+		<a href="https://kennylou92.github.io/tos_story/10801.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10801.jpg" alt="Spirit">Spirit</a>	
+		<a href="https://kennylou92.github.io/tos_story/10802.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10802.jpg" alt="Shy">Shy</a>
+		<a href="https://kennylou92.github.io/tos_story/10803.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10803.jpg" alt="Lady Black">Lady Black</a>	
+		<a href="https://kennylou92.github.io/tos_story/10804.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10804.jpg" alt="天王寺曖">天王寺曖</a>
+		<a href="https://kennylou92.github.io/tos_story/10805.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10805.jpg" alt="眠龍">眠龍</a>	
+		<a href="https://kennylou92.github.io/tos_story/10806.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10806.jpg" alt="Century">Century</a>
+		<a href="https://kennylou92.github.io/tos_story/10807.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10807.jpg" alt="Stardust">Stardust</a>
+		<a href="https://kennylou92.github.io/tos_story/10808.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10808.jpg" alt="小石川惟子">小石川惟子</a>
+		<a href="https://kennylou92.github.io/tos_story/10810.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10810.jpg" alt="Stigma">Stigma</a>
+		<a href="https://kennylou92.github.io/tos_story/10811.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10811.jpg" alt="斯維塔">斯維塔</a>
+		<a href="https://kennylou92.github.io/tos_story/10812.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10812.jpg" alt="怒氣">怒氣</a>
+		<a href="https://kennylou92.github.io/tos_story/10813.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10813.jpg" alt="唔呼呼">唔呼呼</a>
+		<a href="https://kennylou92.github.io/tos_story/10814.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10814.jpg" alt="祈願">祈願</a>
+		<a href="https://kennylou92.github.io/tos_story/10815.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10815.jpg" alt="哭哭">哭哭</a>
+		<a href="https://kennylou92.github.io/tos_story/10816.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10816.jpg" alt="空虛">空虛</a>
+		<a href="https://kennylou92.github.io/tos_story/10818.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10818.jpg" alt="蝦翁">蝦翁</a>
+		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+
+</body>
+</html>
