@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>嶄新時代</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 1200px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 50px; /* 圖片大小 */
+            height: 50px;
+            margin-bottom: 5px;
+        }
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+	<div class="sidebar" id = "sidebar">
+	<a href="https://kennylou92.github.io/tos_story/">🏠<br>回主頁</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story/10036.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10036.jpg" alt="巧舌饞涎 ‧ 柯柯">巧舌饞涎 ‧ 柯柯</a>
+	<a href="https://kennylou92.github.io/tos_story/10037.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10037.jpg" alt="炙紋幻轉 ‧ 各各爾">炙紋幻轉 ‧ 各各爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10038.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10038.jpg" alt="童夢果匠 ‧ 謝貝妮">童夢果匠 ‧ 謝貝妮</a>
+	<a href="https://kennylou92.github.io/tos_story/10039.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10039.jpg" alt="血杖強權 ‧ 果樂兒">血杖強權 ‧ 果樂兒</a>
+	<a href="https://kennylou92.github.io/tos_story/10040.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10040.jpg" alt="幽浮雙戟 ‧ 鬼塚羽">幽浮雙戟 ‧ 鬼塚羽</a>
+	<a href="https://kennylou92.github.io/tos_story/10041.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10041.jpg" alt="龍角焰息 ‧ 珂婍娜">龍角焰息 ‧ 珂婍娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10042.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10042.jpg" alt="繞尖芬芳 ‧ 睡蓮">繞尖芬芳 ‧ 睡蓮</a>
+	<a href="https://kennylou92.github.io/tos_story/10043.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10043.jpg" alt="笛音夢韻 ‧ 漣璇">笛音夢韻 ‧ 漣璇</a>
+	<a href="https://kennylou92.github.io/tos_story/10044.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10044.jpg" alt="蓄力鐳射 ‧ 飛蘿">蓄力鐳射 ‧ 飛蘿</a>
+	<a href="https://kennylou92.github.io/tos_story/10045.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10045.jpg" alt="革新鑄造 ‧ 都雷托">革新鑄造 ‧ 都雷托</a>
+	<a href="https://kennylou92.github.io/tos_story/10047.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10047.jpg" alt="嬌憨龍娃 ‧ 爪娃諾">嬌憨龍娃 ‧ 爪娃諾</a>
+	<a href="https://kennylou92.github.io/tos_story/10048.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10048.jpg" alt="激濤獅心 ‧ 奎內塞">激濤獅心 ‧ 奎內塞</a>
+	<a href="https://kennylou92.github.io/tos_story/10049.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10049.jpg" alt="導火指令 ‧ 珞答以">導火指令 ‧ 珞答以</a>
+	<a href="https://kennylou92.github.io/tos_story/10050.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10050.jpg" alt="秉公處理 ‧ 朗羅">秉公處理 ‧ 朗羅</a>
+	<a href="https://kennylou92.github.io/tos_story/10051.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10051.jpg" alt="破霜狐牙 ‧ 盧班">破霜狐牙 ‧ 盧班</a>
+	<a href="https://kennylou92.github.io/tos_story/10052.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10052.jpg" alt="疾火飛騰 ‧ 斯威夫">疾火飛騰 ‧ 斯威夫</a>
+	<a href="https://kennylou92.github.io/tos_story/10053.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10053.jpg" alt="獵牙追捕 ‧ 沐沐">獵牙追捕 ‧ 沐沐</a>
+	<a href="https://kennylou92.github.io/tos_story/10054.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10054.jpg" alt="三焰合舞 ‧ 風花葉">三焰合舞 ‧ 風花葉</a>
+	<a href="https://kennylou92.github.io/tos_story/10055.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10055.jpg" alt="獸鳴鎮林 ‧ 科普蘭">獸鳴鎮林 ‧ 科普蘭</a>
+	<a href="https://kennylou92.github.io/tos_story/10056.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10056.jpg" alt="奧術窺探 ‧ 比麗安">奧術窺探 ‧ 比麗安</a>
+	<a href="https://kennylou92.github.io/tos_story/10057.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10057.jpg" alt="軍械兵器 ‧ 鋒刃">軍械兵器 ‧ 鋒刃</a>
+	<a href="https://kennylou92.github.io/tos_story/10058.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10058.jpg" alt="靈猴覺行 ‧ 孫悟以">靈猴覺行 ‧ 孫悟以</a>
+	<a href="https://kennylou92.github.io/tos_story/10059.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10059.jpg" alt="寒地探尋 ‧ 大大果">寒地探尋 ‧ 大大果</a>
+	<a href="https://kennylou92.github.io/tos_story/10060.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10060.jpg" alt="戰縫鬥服 ‧ 暹諾德">戰縫鬥服 ‧ 暹諾德</a>
+	<a href="https://kennylou92.github.io/tos_story/10061.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10061.jpg" alt="藥到病除 ‧ 蓮南希">藥到病除 ‧ 蓮南希</a>
+	<a href="https://kennylou92.github.io/tos_story/10062.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10062.jpg" alt="環光聖戰 ‧ 涅索伊">環光聖戰 ‧ 涅索伊</a>
+	<a href="https://kennylou92.github.io/tos_story/10066.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10066.jpg" alt="終極青銅天鵝座 ‧ 冰河">終極青銅天鵝座 ‧ 冰河</a>
+	<a href="https://kennylou92.github.io/tos_story/10068.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10068.jpg" alt="終極青銅鳳凰座 ‧ 一輝">終極青銅鳳凰座 ‧ 一輝</a>
+	<a href="https://kennylou92.github.io/tos_story/10070.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10070.jpg" alt="終極青銅天龍座 ‧ 紫龍">終極青銅天龍座 ‧ 紫龍</a>
+	<a href="https://kennylou92.github.io/tos_story/10072.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10072.jpg" alt="終極青銅天馬座 ‧ 星矢">終極青銅天馬座 ‧ 星矢</a>
+	<a href="https://kennylou92.github.io/tos_story/10074.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10074.jpg" alt="終極青銅仙女座 ‧ 瞬">終極青銅仙女座 ‧ 瞬</a>
+	<a href="https://kennylou92.github.io/tos_story/10076.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10076.jpg" alt="天琴座 ‧ 奧路菲">天琴座 ‧ 奧路菲</a>
+	<a href="https://kennylou92.github.io/tos_story/10077.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10077.jpg" alt="雙子座 ‧ 卡農">雙子座 ‧ 卡農</a>
+	<a href="https://kennylou92.github.io/tos_story/10078.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10078.jpg" alt="冥界指揮官 ‧ 潘朵拉">冥界指揮官 ‧ 潘朵拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10079.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10079.jpg" alt="智慧與戰爭女神 ‧ 雅典娜">智慧與戰爭女神 ‧ 雅典娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10080.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10080.jpg" alt="地妖星 ‧ 繆">地妖星 ‧ 繆</a>
+	<a href="https://kennylou92.github.io/tos_story/10081.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10081.jpg" alt="天英星 ‧ 羅尼 ">天英星 ‧ 羅尼 </a>
+	<a href="https://kennylou92.github.io/tos_story/10082.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10082.jpg" alt="冥王 ‧ 瞬">冥王 ‧ 瞬</a>
+	<a href="https://kennylou92.github.io/tos_story/10083.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10083.jpg" alt="冥衣水瓶座 ‧ 卡妙">冥衣水瓶座 ‧ 卡妙</a>
+	<a href="https://kennylou92.github.io/tos_story/10084.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10084.jpg" alt="冥衣摩羯座 ‧ 修羅">冥衣摩羯座 ‧ 修羅</a>
+	<a href="https://kennylou92.github.io/tos_story/10085.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10085.jpg" alt="冥衣雙子座 ‧ 撒卡">冥衣雙子座 ‧ 撒卡</a>
+	<a href="https://kennylou92.github.io/tos_story/10086.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10086.jpg" alt="冥衣白羊座 ‧ 希歐">冥衣白羊座 ‧ 希歐</a>
+	<a href="https://kennylou92.github.io/tos_story/10087.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10087.jpg" alt="天雄星 ‧ 艾亞哥斯">天雄星 ‧ 艾亞哥斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10088.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10088.jpg" alt="天貴星 ‧ 米諾斯">天貴星 ‧ 米諾斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10089.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10089.jpg" alt="天猛星 ‧ 拉達曼迪斯">天猛星 ‧ 拉達曼迪斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10090.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10090.jpg" alt="睡神 ‧ 休普諾斯">睡神 ‧ 休普諾斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10091.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10091.jpg" alt="冥王 ‧ 黑帝斯">冥王 ‧ 黑帝斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10092.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10092.jpg" alt="死神 ‧ 塔納托斯">死神 ‧ 塔納托斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10093.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10093.jpg" alt="海皇 ‧ 波賽頓">海皇 ‧ 波賽頓</a>
+	<a href="https://kennylou92.github.io/tos_story/10094.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10094.jpg" alt="柔情似水 ‧ 嘉蘭諾德">柔情似水 ‧ 嘉蘭諾德</a>
+	<a href="https://kennylou92.github.io/tos_story/10095.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10095.jpg" alt="百鍊警戒 ‧ 高賓羅">百鍊警戒 ‧ 高賓羅</a>
+	<a href="https://kennylou92.github.io/tos_story/10096.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10096.jpg" alt="真摰無瑕 ‧ 芳荼">真摰無瑕 ‧ 芳荼</a>
+	<a href="https://kennylou92.github.io/tos_story/10097.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10097.jpg" alt="藥理編織 ‧ 貝絲">藥理編織 ‧ 貝絲</a>
+	<a href="https://kennylou92.github.io/tos_story/10098.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10098.jpg" alt="亡命燭火 ‧ 比夫隆">亡命燭火 ‧ 比夫隆</a>
+	<a href="https://kennylou92.github.io/tos_story/10099.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10099.jpg" alt="殘暴凶戾 ‧ 本耶普">殘暴凶戾 ‧ 本耶普</a>
+	<a href="https://kennylou92.github.io/tos_story/10100.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10100.jpg" alt="傲然綻光 ‧ 烏瑞亞">傲然綻光 ‧ 烏瑞亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10101.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10101.jpg" alt="博愛源魔 ‧ 瓦斐森">博愛源魔 ‧ 瓦斐森</a>
+	<a href="https://kennylou92.github.io/tos_story/10102.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10102.jpg" alt="專業兔醫 ‧ 比涅希">專業兔醫 ‧ 比涅希</a>
+	<a href="https://kennylou92.github.io/tos_story/10103.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10103.jpg" alt="財迷美夢 ‧ 青金石">財迷美夢 ‧ 青金石</a>
+	<a href="https://kennylou92.github.io/tos_story/10104.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10104.jpg" alt="接待機體序號7208">接待機體序號7208</a>
+	<a href="https://kennylou92.github.io/tos_story/10105.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10105.jpg" alt="武裝機體序號5213">武裝機體序號5213</a>
+	<a href="https://kennylou92.github.io/tos_story/10106.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10106.jpg" alt="全速運送 ‧ 珼菈伽">全速運送 ‧ 珼菈伽</a>
+	<a href="https://kennylou92.github.io/tos_story/10107.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10107.jpg" alt="裙下殺意 ‧ 朱莉">裙下殺意 ‧ 朱莉</a>
+	<a href="https://kennylou92.github.io/tos_story/10108.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10108.jpg" alt="終身契守 ‧ 和謹">終身契守 ‧ 和謹</a>
+	<a href="https://kennylou92.github.io/tos_story/10109.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10109.jpg" alt="特殊機體序號2234">特殊機體序號2234</a>
+	<a href="https://kennylou92.github.io/tos_story/10110.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10110.jpg" alt="搖光逐律 ‧ 畫珒">搖光逐律 ‧ 畫珒</a>
+	<a href="https://kennylou92.github.io/tos_story/10111.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10111.jpg" alt="察明虛偽 ‧ 安杜馬利烏士">察明虛偽 ‧ 安杜馬利烏士</a>
+	<a href="https://kennylou92.github.io/tos_story/10117.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10117.jpg" alt="天道炎旌 ‧ 刻琿">天道炎旌 ‧ 刻琿</a>
+	<a href="https://kennylou92.github.io/tos_story/10118.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10118.jpg" alt="精確射擊 ‧ 藍德南">精確射擊 ‧ 藍德南</a>
+	<a href="https://kennylou92.github.io/tos_story/10119.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10119.jpg" alt="辰星指導 ‧ 瑪米圖">辰星指導 ‧ 瑪米圖</a>
+	<a href="https://kennylou92.github.io/tos_story/10121.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10121.jpg" alt="轟焦凍">轟焦凍</a>
+	<a href="https://kennylou92.github.io/tos_story/10122.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10122.jpg" alt="爆豪勝己">爆豪勝己</a>
+	<a href="https://kennylou92.github.io/tos_story/10123.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10123.jpg" alt="綠谷出久">綠谷出久</a>
+	<a href="https://kennylou92.github.io/tos_story/10124.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10124.jpg" alt="飯田天哉">飯田天哉</a>
+	<a href="https://kennylou92.github.io/tos_story/10125.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10125.jpg" alt="心操人使">心操人使</a>
+	<a href="https://kennylou92.github.io/tos_story/10126.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10126.jpg" alt="麗日御茶子">麗日御茶子</a>
+	<a href="https://kennylou92.github.io/tos_story/10127.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10127.jpg" alt="切島銳兒郎">切島銳兒郎</a>
+	<a href="https://kennylou92.github.io/tos_story/10128.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10128.jpg" alt="蛙吹梅雨">蛙吹梅雨</a>
+	<a href="https://kennylou92.github.io/tos_story/10129.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10129.jpg" alt="歐爾麥特">歐爾麥特</a>
+	<a href="https://kennylou92.github.io/tos_story/10130.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10130.jpg" alt="抹消磁頭">抹消磁頭</a>
+	<a href="https://kennylou92.github.io/tos_story/10131.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10131.jpg" alt="奮進人">奮進人</a>
+	<a href="https://kennylou92.github.io/tos_story/10132.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10132.jpg" alt="霍克斯">霍克斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10133.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10133.jpg" alt="渡我被身子">渡我被身子</a>
+	<a href="https://kennylou92.github.io/tos_story/10134.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10134.jpg" alt="荼毘">荼毘</a>
+	<a href="https://kennylou92.github.io/tos_story/10135.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10135.jpg" alt="死柄木弔">死柄木弔</a>
+	<a href="https://kennylou92.github.io/tos_story/10136.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10136.jpg" alt="All For One">All For One</a>
+	<a href="https://kennylou92.github.io/tos_story/10137.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10137.jpg" alt="夢域飛馳 ‧ 斑">夢域飛馳 ‧ 斑</a>
+	<a href="https://kennylou92.github.io/tos_story/10138.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10138.jpg" alt="雛型倒轉 ‧ 歐幾里得">雛型倒轉 ‧ 歐幾里得</a>
+	<a href="https://kennylou92.github.io/tos_story/10146.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10146.jpg" alt="屹立獸衛 ‧ 克洛怡">屹立獸衛 ‧ 克洛怡</a>
+	<a href="https://kennylou92.github.io/tos_story/10147.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10147.jpg" alt="龍火爆發 ‧ 彌爾頓">龍火爆發 ‧ 彌爾頓</a>
+	<a href="https://kennylou92.github.io/tos_story/10149.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10149.jpg" alt="點點">點點</a>
+	<a href="https://kennylou92.github.io/tos_story/10150.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10150.jpg" alt="最初的仿魂 ‧ 莉莉絲">最初的仿魂 ‧ 莉莉絲</a>
+	<a href="https://kennylou92.github.io/tos_story/10151.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10151.jpg" alt="奧羅茲守城機體">奧羅茲守城機體</a>
+	<a href="https://kennylou92.github.io/tos_story/10152.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10152.jpg" alt="九面惡獸 ‧ 開明獸">九面惡獸 ‧ 開明獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10153.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10153.jpg" alt="美的暴力 ‧ 內蒂">美的暴力 ‧ 內蒂</a>
+	<a href="https://kennylou92.github.io/tos_story/10154.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10154.jpg" alt="物質衡等 ‧ 普朗克">物質衡等 ‧ 普朗克</a>
+	<a href="https://kennylou92.github.io/tos_story/10155.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10155.jpg" alt="理性機率 ‧ 伊娃">理性機率 ‧ 伊娃</a>
+	<a href="https://kennylou92.github.io/tos_story/10156.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10156.jpg" alt="殺虐天性 ‧ 鮑威">殺虐天性 ‧ 鮑威</a>
+	<a href="https://kennylou92.github.io/tos_story/10157.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10157.jpg" alt="蹦跳獵食 ‧ 波特">蹦跳獵食 ‧ 波特</a>
+	<a href="https://kennylou92.github.io/tos_story/10158.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10158.jpg" alt="鴉首掌控 ‧ 哈帕斯">鴉首掌控 ‧ 哈帕斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10159.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10159.jpg" alt="虛與偽 ‧ 混沌之花">虛與偽 ‧ 混沌之花</a>
+	<a href="https://kennylou92.github.io/tos_story/10160.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10160.jpg" alt="六識通悟 ‧ 孫悟識">六識通悟 ‧ 孫悟識</a>
+	<a href="https://kennylou92.github.io/tos_story/10161.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10161.jpg" alt="凶獸馴化 ‧ 小魔女薇薇亞">凶獸馴化 ‧ 小魔女薇薇亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10162.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10162.jpg" alt="敲響新息 ‧ 小蘭">敲響新息 ‧ 小蘭</a>
+	<a href="https://kennylou92.github.io/tos_story/10163.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10163.jpg" alt="率領演化 ‧ 馬丁">率領演化 ‧ 馬丁</a>
+	<a href="https://kennylou92.github.io/tos_story/10164.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10164.jpg" alt="嬌豔純愛 ‧ 列蒂西雅">嬌豔純愛 ‧ 列蒂西雅</a>
+	<a href="https://kennylou92.github.io/tos_story/10165.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10165.jpg" alt="救世主 ‧ 以諾">救世主 ‧ 以諾</a>
+	<a href="https://kennylou92.github.io/tos_story/10166.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10166.jpg" alt="流火祈夢 ‧ 英格麗">流火祈夢 ‧ 英格麗</a>
+	<a href="https://kennylou92.github.io/tos_story/10167.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10167.jpg" alt="破海龍刃 ‧ 敖聲聞">破海龍刃 ‧ 敖聲聞</a>
+	<a href="https://kennylou92.github.io/tos_story/10168.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10168.jpg" alt="鶴立史群 ‧ 大力姆">鶴立史群 ‧ 大力姆</a>
+	<a href="https://kennylou92.github.io/tos_story/10169.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10169.jpg" alt="恭賀新禧 ‧ 利哥與福妹">恭賀新禧 ‧ 利哥與福妹</a>
+	<a href="https://kennylou92.github.io/tos_story/10170.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10170.jpg" alt="樂韻悠揚 ‧ 梅樂蒂">樂韻悠揚 ‧ 梅樂蒂</a>
+	<a href="https://kennylou92.github.io/tos_story/10171.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10171.jpg" alt="恩澤禱告 ‧ 卡西爾">恩澤禱告 ‧ 卡西爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10172.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10172.jpg" alt="坂田銀時">坂田銀時</a>
+	<a href="https://kennylou92.github.io/tos_story/10173.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10173.jpg" alt="神樂">神樂</a>
+	<a href="https://kennylou92.github.io/tos_story/10174.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10174.jpg" alt="坂本辰馬">坂本辰馬</a>
+	<a href="https://kennylou92.github.io/tos_story/10175.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10175.jpg" alt="定春">定春</a>
+	<a href="https://kennylou92.github.io/tos_story/10176.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10176.jpg" alt="志村新八">志村新八</a>
+	<a href="https://kennylou92.github.io/tos_story/10177.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10177.jpg" alt="伊麗莎白">伊麗莎白</a>
+	<a href="https://kennylou92.github.io/tos_story/10178.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10178.jpg" alt="桂小太郎">桂小太郎</a>
+	<a href="https://kennylou92.github.io/tos_story/10179.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10179.jpg" alt="高杉晉助">高杉晉助</a>
+	<a href="https://kennylou92.github.io/tos_story/10180.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10180.jpg" alt="山崎退">山崎退</a>
+	<a href="https://kennylou92.github.io/tos_story/10181.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10181.jpg" alt="土方十四郎">土方十四郎</a>
+	<a href="https://kennylou92.github.io/tos_story/10182.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10182.jpg" alt="沖田總悟">沖田總悟</a>
+	<a href="https://kennylou92.github.io/tos_story/10183.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10183.jpg" alt="近藤勳">近藤勳</a>
+	<a href="https://kennylou92.github.io/tos_story/10184.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10184.jpg" alt="白夜叉 (坂田銀時)">白夜叉 (坂田銀時)</a>
+	<a href="https://kennylou92.github.io/tos_story/10185.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10185.jpg" alt="河上萬齊">河上萬齊</a>
+	<a href="https://kennylou92.github.io/tos_story/10186.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10186.jpg" alt="神威">神威</a>
+	<a href="https://kennylou92.github.io/tos_story/10187.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10187.jpg" alt="虛">虛</a>
+	<a href="https://kennylou92.github.io/tos_story/10188.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10188.jpg" alt="志村妙">志村妙</a>
+	<a href="https://kennylou92.github.io/tos_story/10189.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10189.jpg" alt="柳生九兵衛">柳生九兵衛</a>
+	<a href="https://kennylou92.github.io/tos_story/10190.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10190.jpg" alt="猿飛菖蒲">猿飛菖蒲</a>
+	<a href="https://kennylou92.github.io/tos_story/10191.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10191.jpg" alt="月詠">月詠</a>
+	<a href="https://kennylou92.github.io/tos_story/10192.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10192.jpg" alt="玉子">玉子</a>
+	<a href="https://kennylou92.github.io/tos_story/10193.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10193.jpg" alt="登勢大嬸">登勢大嬸</a>
+	<a href="https://kennylou92.github.io/tos_story/10194.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10194.jpg" alt="傑士塔威">傑士塔威</a>
+	<a href="https://kennylou92.github.io/tos_story/10195.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10195.jpg" alt="長谷川泰三">長谷川泰三</a>
+	<a href="https://kennylou92.github.io/tos_story/10196.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10196.jpg" alt="哈達王子">哈達王子</a>
+	<a href="https://kennylou92.github.io/tos_story/10197.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10197.jpg" alt="盈蕙龍嘯 ‧ 依蓮尼亞">盈蕙龍嘯 ‧ 依蓮尼亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10198.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10198.jpg" alt="狐靈召來 ‧ 安倍悟">狐靈召來 ‧ 安倍悟</a>
+	<a href="https://kennylou92.github.io/tos_story/10200.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10200.jpg" alt="一曲傾心 ‧ 莫莉安娜">一曲傾心 ‧ 莫莉安娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10201.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10201.jpg" alt="叛世的神王 ‧ 宙斯">叛世的神王 ‧ 宙斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10202.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10202.jpg" alt="大蠕蟲之主 ‧ 修德">大蠕蟲之主 ‧ 修德</a>
+	<a href="https://kennylou92.github.io/tos_story/10203.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10203.jpg" alt="盔下盛顏 ‧ 納金">盔下盛顏 ‧ 納金</a>
+	<a href="https://kennylou92.github.io/tos_story/10204.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10204.jpg" alt="刻骨銘愛 ‧ 米蘭達">刻骨銘愛 ‧ 米蘭達</a>
+	<a href="https://kennylou92.github.io/tos_story/10205.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10205.jpg" alt="捕蛋能手 ‧ 跑跑">捕蛋能手 ‧ 跑跑</a>
+	<a href="https://kennylou92.github.io/tos_story/10206.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10206.jpg" alt="樹臨風拂 ‧ 尤耳">樹臨風拂 ‧ 尤耳</a>
+	<a href="https://kennylou92.github.io/tos_story/10207.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10207.jpg" alt="祈願貴公子 ‧ 系爾">祈願貴公子 ‧ 系爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10208.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10208.jpg" alt="激情樂曲 ‧ 謝溫蕾">激情樂曲 ‧ 謝溫蕾</a>
+	<a href="https://kennylou92.github.io/tos_story/10209.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10209.jpg" alt="鑄武機工 ‧ 道拉格">鑄武機工 ‧ 道拉格</a>
+	<a href="https://kennylou92.github.io/tos_story/10210.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10210.jpg" alt="橫衝直撞 ‧ 萌萌">橫衝直撞 ‧ 萌萌</a>
+	<a href="https://kennylou92.github.io/tos_story/10211.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10211.jpg" alt="妮奧：Reverse模式">妮奧：Reverse模式</a>
+	<a href="https://kennylou92.github.io/tos_story/10212.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10212.jpg" alt="妮奧：Hello World模式">妮奧：Hello World模式</a>
+	<a href="https://kennylou92.github.io/tos_story/10213.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10213.jpg" alt="帶來親和的慈愛天使 瑪娜">帶來親和的慈愛天使 瑪娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10214.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10214.jpg" alt="壯烈的樂園守護者 加百列">壯烈的樂園守護者 加百列</a>
+	<a href="https://kennylou92.github.io/tos_story/10215.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10215.jpg" alt="賜予神之光開啟天國者 烏列爾">賜予神之光開啟天國者 烏列爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10216.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10216.jpg" alt="怪盜亞森：魅影模式">怪盜亞森：魅影模式</a>
+	<a href="https://kennylou92.github.io/tos_story/10217.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10217.jpg" alt="絕對無敵的恐怖大王 諾斯特拉達姆斯">絕對無敵的恐怖大王 諾斯特拉達姆斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10218.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10218.jpg" alt="真摰羈絆的聖劍 王者之劍">真摰羈絆的聖劍 王者之劍</a>
+	<a href="https://kennylou92.github.io/tos_story/10219.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10219.jpg" alt="憐愛三千世界的妙音女神 弁財天">憐愛三千世界的妙音女神 弁財天</a>
+	<a href="https://kennylou92.github.io/tos_story/10220.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10220.jpg" alt="好奇轉換的希望少女 潘朵拉">好奇轉換的希望少女 潘朵拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10221.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10221.jpg" alt="邂逅相逢的思念之力 Two for all">邂逅相逢的思念之力 Two for all</a>
+	<a href="https://kennylou92.github.io/tos_story/10224.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10224.jpg" alt="新世界的誕生 巴貝爾">新世界的誕生 巴貝爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10225.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10225.jpg" alt="滅絕之人 奈落">滅絕之人 奈落</a>
+	<a href="https://kennylou92.github.io/tos_story/10226.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10226.jpg" alt="聖杯系統．阿瓦隆">聖杯系統．阿瓦隆</a>
+	<a href="https://kennylou92.github.io/tos_story/10227.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10227.jpg" alt="不死神仙 蓬萊">不死神仙 蓬萊</a>
+	<a href="https://kennylou92.github.io/tos_story/10228.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10228.jpg" alt="相背自身者 安岐鐵桀">相背自身者 安岐鐵桀</a>
+	<a href="https://kennylou92.github.io/tos_story/10229.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10229.jpg" alt="狂熱粉絲三人組">狂熱粉絲三人組</a>
+	<a href="https://kennylou92.github.io/tos_story/10235.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10235.jpg" alt="狂傲血魔 ‧ 德古拉">狂傲血魔 ‧ 德古拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10236.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10236.jpg" alt="沉潛斑翼 ‧ 約菲">沉潛斑翼 ‧ 約菲</a>
+	<a href="https://kennylou92.github.io/tos_story/10237.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10237.jpg" alt="烈心豔鬥 ‧ 梅根">烈心豔鬥 ‧ 梅根</a>
+	<a href="https://kennylou92.github.io/tos_story/10238.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10238.jpg" alt="重義情全 ‧ 西奧">重義情全 ‧ 西奧</a>
+	<a href="https://kennylou92.github.io/tos_story/10239.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10239.jpg" alt="愛憐傷蝶 ‧ 賽薇亞拉">愛憐傷蝶 ‧ 賽薇亞拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10240.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10240.jpg" alt="異端碾碎 ‧ 菲力普">異端碾碎 ‧ 菲力普</a>
+	<a href="https://kennylou92.github.io/tos_story/10241.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10241.jpg" alt="盛氣凌人 ‧ 溫斯敦">盛氣凌人 ‧ 溫斯敦</a>
+	<a href="https://kennylou92.github.io/tos_story/10243.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10243.jpg" alt="混種異魔 ‧ 納貝流士">混種異魔 ‧ 納貝流士</a>
+	<a href="https://kennylou92.github.io/tos_story/10244.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10244.jpg" alt="石田大和與加布獸">石田大和與加布獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10245.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10245.jpg" alt="八神太一與亞古獸">八神太一與亞古獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10246.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10246.jpg" alt="太刀川美美與巴魯獸">太刀川美美與巴魯獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10247.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10247.jpg" alt="高石武與巴達獸與八神嘉兒與迪路獸">高石武與巴達獸與八神嘉兒與迪路獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10248.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10248.jpg" alt="泉光子郎與甲蟲獸">泉光子郎與甲蟲獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10249.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10249.jpg" alt="城戶丈與哥瑪獸">城戶丈與哥瑪獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10250.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10250.jpg" alt="武之內素娜與比丘獸">武之內素娜與比丘獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10251.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10251.jpg" alt="獅子獸">獅子獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10252.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10252.jpg" alt="惡魔獸">惡魔獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10253.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10253.jpg" alt="奧加獸">奧加獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10254.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10254.jpg" alt="淑女惡魔獸">淑女惡魔獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10255.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10255.jpg" alt="究極吸血魔獸">究極吸血魔獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10256.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10256.jpg" alt="鋼鐵海龍獸">鋼鐵海龍獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10257.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10257.jpg" alt="木偶獸">木偶獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10258.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10258.jpg" alt="機械邪龍獸">機械邪龍獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10259.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10259.jpg" alt="小丑皇">小丑皇</a>
+	<a href="https://kennylou92.github.io/tos_story/10260.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10260.jpg" alt="啟示錄獸">啟示錄獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10261.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10261.jpg" alt="超惡魔獸">超惡魔獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10262.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10262.jpg" alt="V仔獸與蟲蟲獸">V仔獸與蟲蟲獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10263.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10263.jpg" alt="鼻涕獸與大便獸與芝蒙獸">鼻涕獸與大便獸與芝蒙獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10270.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10270.jpg" alt="星械造主 ‧ 奧米伽">星械造主 ‧ 奧米伽</a>
+	<a href="https://kennylou92.github.io/tos_story/10271.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10271.jpg" alt="曦光冷瞳 ‧ 隱德萊">曦光冷瞳 ‧ 隱德萊</a>
+	<a href="https://kennylou92.github.io/tos_story/10273.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10273.jpg" alt="浩瀚蝕流 ‧ 豪斯">浩瀚蝕流 ‧ 豪斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10274.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10274.jpg" alt="荒林吹息 ‧ 愛得拉">荒林吹息 ‧ 愛得拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10275.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10275.jpg" alt="尖牙撕咬 ‧ 巨碩異鯊">尖牙撕咬 ‧ 巨碩異鯊</a>
+	<a href="https://kennylou92.github.io/tos_story/10276.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10276.jpg" alt="撼地重拳 ‧ 糖果巨人">撼地重拳 ‧ 糖果巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10277.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10277.jpg" alt="血鐮巨獸 ‧ 瓦布拉">血鐮巨獸 ‧ 瓦布拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10278.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10278.jpg" alt="遺世龍魂 ‧ 尤麗婭">遺世龍魂 ‧ 尤麗婭</a>
+	<a href="https://kennylou92.github.io/tos_story/10279.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10279.jpg" alt="拳破星屑 ‧ 烏圖">拳破星屑 ‧ 烏圖</a>
+	<a href="https://kennylou92.github.io/tos_story/10280.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10280.jpg" alt="獸道征途 ‧ 凱撒">獸道征途 ‧ 凱撒</a>
+	<a href="https://kennylou92.github.io/tos_story/10281.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10281.jpg" alt="魔刀掠空 ‧ 珍娜">魔刀掠空 ‧ 珍娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10282.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10282.jpg" alt="重炮轟殺 ‧ 藍道夫">重炮轟殺 ‧ 藍道夫</a>
+	<a href="https://kennylou92.github.io/tos_story/10283.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10283.jpg" alt="絕心械骨 ‧ 凱伊">絕心械骨 ‧ 凱伊</a>
+	<a href="https://kennylou92.github.io/tos_story/10284.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10284.jpg" alt="皇劍傳承 ‧ 法雷迪">皇劍傳承 ‧ 法雷迪</a>
+	<a href="https://kennylou92.github.io/tos_story/10285.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10285.jpg" alt="皓羽疾影 ‧ 雨果">皓羽疾影 ‧ 雨果</a>
+	<a href="https://kennylou92.github.io/tos_story/10286.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10286.jpg" alt="死士動員 ‧ 馬卡斯">死士動員 ‧ 馬卡斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10287.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10287.jpg" alt="毀星掠盡 ‧ 賈艾斯">毀星掠盡 ‧ 賈艾斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10288.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10288.jpg" alt="群魔首魁 ‧ 卡洛 ">群魔首魁 ‧ 卡洛 </a>
+	<a href="https://kennylou92.github.io/tos_story/10291.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10291.jpg" alt="銀牙">銀牙</a>
+	<a href="https://kennylou92.github.io/tos_story/10292.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10292.jpg" alt="傑諾斯">傑諾斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10293.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10293.jpg" alt="戰慄的龍卷">戰慄的龍卷</a>
+	<a href="https://kennylou92.github.io/tos_story/10294.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10294.jpg" alt="埼玉">埼玉</a>
+	<a href="https://kennylou92.github.io/tos_story/10295.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10295.jpg" alt="KING">KING</a>
+	<a href="https://kennylou92.github.io/tos_story/10296.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10296.jpg" alt="地獄的吹雪">地獄的吹雪</a>
+	<a href="https://kennylou92.github.io/tos_story/10297.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10297.jpg" alt="無照騎士">無照騎士</a>
+	<a href="https://kennylou92.github.io/tos_story/10299.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10299.jpg" alt="音速的索尼克">音速的索尼克</a>
+	<a href="https://kennylou92.github.io/tos_story/10300.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10300.jpg" alt="餓狼">餓狼</a>
+	<a href="https://kennylou92.github.io/tos_story/10301.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10301.jpg" alt="波羅斯">波羅斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10302.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10302.jpg" alt="墨染章瞳 ‧ 密克">墨染章瞳 ‧ 密克</a>
+	<a href="https://kennylou92.github.io/tos_story/10303.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10303.jpg" alt="聲潮籟音 ‧ 蜜亞">聲潮籟音 ‧ 蜜亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10304.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10304.jpg" alt="潮浪絞殺 ‧ 旺妲">潮浪絞殺 ‧ 旺妲</a>
+	<a href="https://kennylou92.github.io/tos_story/10305.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10305.jpg" alt="千肢百觸 ‧ 奧利弗">千肢百觸 ‧ 奧利弗</a>
+	<a href="https://kennylou92.github.io/tos_story/10306.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10306.jpg" alt="華燈出遊 ‧ 秋奈">華燈出遊 ‧ 秋奈</a>
+	<a href="https://kennylou92.github.io/tos_story/10307.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10307.jpg" alt="空想禮裝 ‧ 莉莉絲">空想禮裝 ‧ 莉莉絲</a>
+	<a href="https://kennylou92.github.io/tos_story/10309.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10309.jpg" alt="幻瓏倩狐 ‧ 姜湘">幻瓏倩狐 ‧ 姜湘</a>
+	<a href="https://kennylou92.github.io/tos_story/10310.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10310.jpg" alt="靈芝孢子 ‧ 奇諾">靈芝孢子 ‧ 奇諾</a>
+	<a href="https://kennylou92.github.io/tos_story/10311.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10311.jpg" alt="冰與火之心 · 辛西亞">冰與火之心 · 辛西亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10312.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10312.jpg" alt="鐵骨詭熊 ‧ 盧基烏斯">鐵骨詭熊 ‧ 盧基烏斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10313.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10313.jpg" alt="血噬捕獸夾 ‧ 亞爾曼">血噬捕獸夾 ‧ 亞爾曼</a>
+	<a href="https://kennylou92.github.io/tos_story/10314.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10314.jpg" alt="深林毒巫 · 約克">深林毒巫 · 約克</a>
+	<a href="https://kennylou92.github.io/tos_story/10315.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10315.jpg" alt="假意籌資 · 波波">假意籌資 · 波波</a>
+	<a href="https://kennylou92.github.io/tos_story/10316.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10316.jpg" alt="水柱翻騰 · 埃德加">水柱翻騰 · 埃德加</a>
+	<a href="https://kennylou92.github.io/tos_story/10317.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10317.jpg" alt="葬殺潛龍 · 樺桀">葬殺潛龍 · 樺桀</a>
+	<a href="https://kennylou92.github.io/tos_story/10319.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10319.jpg" alt="商戰爭鋒 ‧ 羅森">商戰爭鋒 ‧ 羅森</a>
+	<a href="https://kennylou92.github.io/tos_story/10320.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10320.jpg" alt="極限魔祭 ‧ 司路域">極限魔祭 ‧ 司路域</a>
+	<a href="https://kennylou92.github.io/tos_story/10327.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10327.jpg" alt="殺手＜睡美人＞">殺手＜睡美人＞</a>
+	<a href="https://kennylou92.github.io/tos_story/10328.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10328.jpg" alt="間諜＜黃昏＞">間諜＜黃昏＞</a>
+	<a href="https://kennylou92.github.io/tos_story/10329.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10329.jpg" alt="讀心超能．安妮亞">讀心超能．安妮亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10331.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10331.jpg" alt="弗朗基．富蘭克林">弗朗基．富蘭克林</a>
+	<a href="https://kennylou92.github.io/tos_story/10332.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10332.jpg" alt="貝琪．布萊克貝爾">貝琪．布萊克貝爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10333.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10333.jpg" alt="彭德．佛傑">彭德．佛傑</a>
+	<a href="https://kennylou92.github.io/tos_story/10334.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10334.jpg" alt="亨利．韓德森">亨利．韓德森</a>
+	<a href="https://kennylou92.github.io/tos_story/10335.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10335.jpg" alt="達米安與艾彌爾與尤恩">達米安與艾彌爾與尤恩</a>
+	<a href="https://kennylou92.github.io/tos_story/10336.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10336.jpg" alt="尤利．布萊爾">尤利．布萊爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10337.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10337.jpg" alt="安妮亞．佛傑">安妮亞．佛傑</a>
+	<a href="https://kennylou92.github.io/tos_story/10338.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10338.jpg" alt="洛伊德．佛傑">洛伊德．佛傑</a>
+	<a href="https://kennylou92.github.io/tos_story/10339.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10339.jpg" alt="約兒．佛傑">約兒．佛傑</a>
+	<a href="https://kennylou92.github.io/tos_story/10341.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10341.jpg" alt="超級水手水星">超級水手水星</a>
+	<a href="https://kennylou92.github.io/tos_story/10342.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10342.jpg" alt="超級水手火星">超級水手火星</a>
+	<a href="https://kennylou92.github.io/tos_story/10343.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10343.jpg" alt="超級水手木星">超級水手木星</a>
+	<a href="https://kennylou92.github.io/tos_story/10344.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10344.jpg" alt="超級水手月亮">超級水手月亮</a>
+	<a href="https://kennylou92.github.io/tos_story/10346.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10346.jpg" alt="超級水手土星">超級水手土星</a>
+	<a href="https://kennylou92.github.io/tos_story/10347.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10347.jpg" alt="超級水手小月亮與艾利歐斯">超級水手小月亮與艾利歐斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10348.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10348.jpg" alt="超級水手金星">超級水手金星</a>
+	<a href="https://kennylou92.github.io/tos_story/10349.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10349.jpg" alt="超級水手冥王星">超級水手冥王星</a>
+	<a href="https://kennylou92.github.io/tos_story/10350.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10350.jpg" alt="露娜與阿提米斯與黛安娜">露娜與阿提米斯與黛安娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10351.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10351.jpg" alt="新希蕾妮蒂女王與安迪米歐國王">新希蕾妮蒂女王與安迪米歐國王</a>
+	<a href="https://kennylou92.github.io/tos_story/10352.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10352.jpg" alt="超級水手海王星">超級水手海王星</a>
+	<a href="https://kennylou92.github.io/tos_story/10353.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10353.jpg" alt="超級水手天王星">超級水手天王星</a>
+	<a href="https://kennylou92.github.io/tos_story/10354.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10354.jpg" alt="晚禮服假面">晚禮服假面</a>
+	<a href="https://kennylou92.github.io/tos_story/10355.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10355.jpg" alt="帕拉帕拉">帕拉帕拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10356.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10356.jpg" alt="維斯維斯">維斯維斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10357.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10357.jpg" alt="朱恩朱恩">朱恩朱恩</a>
+	<a href="https://kennylou92.github.io/tos_story/10358.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10358.jpg" alt="瑟雷瑟雷">瑟雷瑟雷</a>
+	<a href="https://kennylou92.github.io/tos_story/10359.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10359.jpg" alt="吉爾科尼亞">吉爾科尼亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10360.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10360.jpg" alt="妮黑蕾雅">妮黑蕾雅</a>
+	<a href="https://kennylou92.github.io/tos_story/10361.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10361.jpg" alt="空靈音色 ‧ 言洛語">空靈音色 ‧ 言洛語</a>
+	<a href="https://kennylou92.github.io/tos_story/10362.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10362.jpg" alt="孤寂心謠 ‧ 華霜婷">孤寂心謠 ‧ 華霜婷</a>
+	<a href="https://kennylou92.github.io/tos_story/10363.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10363.jpg" alt="魔障囚夢 ‧ 夜夫人">魔障囚夢 ‧ 夜夫人</a>
+	<a href="https://kennylou92.github.io/tos_story/10364.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10364.jpg" alt="炙炎巨翼 ‧ 惡想機械人">炙炎巨翼 ‧ 惡想機械人</a>
+	<a href="https://kennylou92.github.io/tos_story/10368.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10368.jpg" alt="神月破夜 ‧ 阿提密斯">神月破夜 ‧ 阿提密斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10370.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10370.jpg" alt="神創 ‧ 零覓">神創 ‧ 零覓</a>
+	<a href="https://kennylou92.github.io/tos_story/10371.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10371.jpg" alt="魔滅 ‧ 一願">魔滅 ‧ 一願</a>
+	<a href="https://kennylou92.github.io/tos_story/10372.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10372.jpg" alt="血眷臣服 ‧ 卡蜜拉">血眷臣服 ‧ 卡蜜拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10373.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10373.jpg" alt="爆破高手 ‧ 諾貝爾">爆破高手 ‧ 諾貝爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10374.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10374.jpg" alt="風神怒疾 ‧ 志那都">風神怒疾 ‧ 志那都</a>
+	<a href="https://kennylou92.github.io/tos_story/10375.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10375.jpg" alt="雷神耀天 ‧ 晴賀">雷神耀天 ‧ 晴賀</a>
+	<a href="https://kennylou92.github.io/tos_story/10376.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10376.jpg" alt="雛祭令嬡 ‧ 京子">雛祭令嬡 ‧ 京子</a>
+	<a href="https://kennylou92.github.io/tos_story/10377.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10377.jpg" alt="天皇雛偶 ‧ 和輝">天皇雛偶 ‧ 和輝</a>
+	<a href="https://kennylou92.github.io/tos_story/10378.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10378.jpg" alt="絕倫法術 ‧ 戴倫">絕倫法術 ‧ 戴倫</a>
+	<a href="https://kennylou92.github.io/tos_story/10379.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10379.jpg" alt="靈花預言 ‧ 啟明花">靈花預言 ‧ 啟明花</a>
+	<a href="https://kennylou92.github.io/tos_story/10380.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10380.jpg" alt="高危炮堡 ‧ 日本城">高危炮堡 ‧ 日本城</a>
+	<a href="https://kennylou92.github.io/tos_story/10381.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10381.jpg" alt="狂擊拳者 ‧ 吉姆">狂擊拳者 ‧ 吉姆</a>
+	<a href="https://kennylou92.github.io/tos_story/10382.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10382.jpg" alt="米卡莎 ‧ 阿卡曼">米卡莎 ‧ 阿卡曼</a>
+	<a href="https://kennylou92.github.io/tos_story/10383.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10383.jpg" alt="艾連 ‧ 葉卡">艾連 ‧ 葉卡</a>
+	<a href="https://kennylou92.github.io/tos_story/10384.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10384.jpg" alt="進擊的巨人">進擊的巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10385.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10385.jpg" alt="莎夏 ‧ 布勞斯">莎夏 ‧ 布勞斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10386.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10386.jpg" alt="阿爾敏 ‧ 亞魯雷特">阿爾敏 ‧ 亞魯雷特</a>
+	<a href="https://kennylou92.github.io/tos_story/10387.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10387.jpg" alt="超大型巨人 (阿爾敏)">超大型巨人 (阿爾敏)</a>
+	<a href="https://kennylou92.github.io/tos_story/10388.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10388.jpg" alt="里維兵長">里維兵長</a>
+	<a href="https://kennylou92.github.io/tos_story/10389.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10389.jpg" alt="約翰 ‧ 基爾休坦">約翰 ‧ 基爾休坦</a>
+	<a href="https://kennylou92.github.io/tos_story/10390.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10390.jpg" alt="希絲特莉亞 ‧ 雷斯">希絲特莉亞 ‧ 雷斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10391.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10391.jpg" alt="漢吉 ‧ 佐耶">漢吉 ‧ 佐耶</a>
+	<a href="https://kennylou92.github.io/tos_story/10392.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10392.jpg" alt="艾爾文 ‧ 史密斯">艾爾文 ‧ 史密斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10393.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10393.jpg" alt="肯尼 ‧ 阿卡曼">肯尼 ‧ 阿卡曼</a>
+	<a href="https://kennylou92.github.io/tos_story/10394.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10394.jpg" alt="無垢巨人">無垢巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10395.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10395.jpg" alt="超大型巨人 (貝爾托特)">超大型巨人 (貝爾托特)</a>
+	<a href="https://kennylou92.github.io/tos_story/10396.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10396.jpg" alt="車力巨人">車力巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10397.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10397.jpg" alt="顎之巨人">顎之巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10398.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10398.jpg" alt="亞妮 ‧ 雷恩哈特與女巨人">亞妮 ‧ 雷恩哈特與女巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10399.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10399.jpg" alt="戰槌巨人">戰槌巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10400.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10400.jpg" alt="萊納 ‧ 布朗與盔甲巨人">萊納 ‧ 布朗與盔甲巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10401.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10401.jpg" alt="吉克 ‧ 葉卡與野獸巨人">吉克 ‧ 葉卡與野獸巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10408.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10408.jpg" alt="制霸拳皇 ‧ 阿里">制霸拳皇 ‧ 阿里</a>
+	<a href="https://kennylou92.github.io/tos_story/10409.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10409.jpg" alt="染血教徒 ‧ 馬克白">染血教徒 ‧ 馬克白</a>
+	<a href="https://kennylou92.github.io/tos_story/10410.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10410.jpg" alt="驕陽永耀 ‧ 阿圖姆">驕陽永耀 ‧ 阿圖姆</a>
+	<a href="https://kennylou92.github.io/tos_story/10411.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10411.jpg" alt="光艦升空 ‧ 金字塔">光艦升空 ‧ 金字塔</a>
+	<a href="https://kennylou92.github.io/tos_story/10412.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10412.jpg" alt="闖墓竊寶 ‧ 雅菈施">闖墓竊寶 ‧ 雅菈施</a>
+	<a href="https://kennylou92.github.io/tos_story/10413.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10413.jpg" alt="不腐神醫 ‧ 印何闐">不腐神醫 ‧ 印何闐</a>
+	<a href="https://kennylou92.github.io/tos_story/10414.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10414.jpg" alt="聖獅護靈 ‧ 法蒂亞 ">聖獅護靈 ‧ 法蒂亞 </a>
+	<a href="https://kennylou92.github.io/tos_story/10416.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10416.jpg" alt="疏狂妖刀客 ‧ 柳生十兵衛">疏狂妖刀客 ‧ 柳生十兵衛</a>
+	<a href="https://kennylou92.github.io/tos_story/10417.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10417.jpg" alt="雪色罪印 ‧ 白雪">雪色罪印 ‧ 白雪</a>
+	<a href="https://kennylou92.github.io/tos_story/10418.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10418.jpg" alt="始計忍 ‧ 百地颯">始計忍 ‧ 百地颯</a>
+	<a href="https://kennylou92.github.io/tos_story/10419.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10419.jpg" alt="影行忍 ‧ 百地凪">影行忍 ‧ 百地凪</a>
+	<a href="https://kennylou92.github.io/tos_story/10420.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10420.jpg" alt="盜金行善 ‧ 石川五右衛門">盜金行善 ‧ 石川五右衛門</a>
+	<a href="https://kennylou92.github.io/tos_story/10421.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10421.jpg" alt="笑裡藏刀 ‧ 澤庵宗彭">笑裡藏刀 ‧ 澤庵宗彭</a>
+	<a href="https://kennylou92.github.io/tos_story/10423.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10423.jpg" alt="冒險指引 ‧ 愛希莉">冒險指引 ‧ 愛希莉</a>
+	<a href="https://kennylou92.github.io/tos_story/10424.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10424.jpg" alt="狗卷棘">狗卷棘</a>
+	<a href="https://kennylou92.github.io/tos_story/10425.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10425.jpg" alt="禪院真希">禪院真希</a>
+	<a href="https://kennylou92.github.io/tos_story/10426.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10426.jpg" alt="熊貓">熊貓</a>
+	<a href="https://kennylou92.github.io/tos_story/10427.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10427.jpg" alt="虎杖悠仁">虎杖悠仁</a>
+	<a href="https://kennylou92.github.io/tos_story/10428.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10428.jpg" alt="五條悟">五條悟</a>
+	<a href="https://kennylou92.github.io/tos_story/10429.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10429.jpg" alt="釘崎野薔薇">釘崎野薔薇</a>
+	<a href="https://kennylou92.github.io/tos_story/10430.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10430.jpg" alt="七海建人">七海建人</a>
+	<a href="https://kennylou92.github.io/tos_story/10431.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10431.jpg" alt="伏黑惠">伏黑惠</a>
+	<a href="https://kennylou92.github.io/tos_story/10432.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10432.jpg" alt="禪院真依">禪院真依</a>
+	<a href="https://kennylou92.github.io/tos_story/10433.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10433.jpg" alt="東堂葵">東堂葵</a>
+	<a href="https://kennylou92.github.io/tos_story/10434.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10434.jpg" alt="兩面宿儺">兩面宿儺</a>
+	<a href="https://kennylou92.github.io/tos_story/10435.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10435.jpg" alt="真人">真人</a>
+	<a href="https://kennylou92.github.io/tos_story/10436.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10436.jpg" alt="漏瑚">漏瑚</a>
+	<a href="https://kennylou92.github.io/tos_story/10437.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10437.jpg" alt="花御">花御</a>
+	<a href="https://kennylou92.github.io/tos_story/10438.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10438.jpg" alt="究極機械丸">究極機械丸</a>
+	<a href="https://kennylou92.github.io/tos_story/10439.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10439.jpg" alt="夏油傑">夏油傑</a>
+	<a href="https://kennylou92.github.io/tos_story/10440.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10440.jpg" alt="荒誕愚言 ‧ 皮諾丘">荒誕愚言 ‧ 皮諾丘</a>
+	<a href="https://kennylou92.github.io/tos_story/10447.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10447.jpg" alt="引禍之箭 ‧ 列拉金">引禍之箭 ‧ 列拉金</a>
+	<a href="https://kennylou92.github.io/tos_story/10448.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10448.jpg" alt="擊鼓競渡 ‧ 端陽號">擊鼓競渡 ‧ 端陽號</a>
+	<a href="https://kennylou92.github.io/tos_story/10450.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10450.jpg" alt="仇業佈局 ‧ 拿破崙">仇業佈局 ‧ 拿破崙</a>
+	<a href="https://kennylou92.github.io/tos_story/10451.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10451.jpg" alt="無私母愛 ‧ 路維亞">無私母愛 ‧ 路維亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10452.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10452.jpg" alt="血色燎裾 ‧ 萊蒂西亞">血色燎裾 ‧ 萊蒂西亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10453.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10453.jpg" alt="禍心形身  ‧ 卡洛">禍心形身  ‧ 卡洛</a>
+	<a href="https://kennylou92.github.io/tos_story/10454.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10454.jpg" alt="魔慾橫流 ‧ 塞巴斯帝亞諾">魔慾橫流 ‧ 塞巴斯帝亞諾</a>
+	<a href="https://kennylou92.github.io/tos_story/10455.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10455.jpg" alt="無序飢餓 ‧ 哈佛">無序飢餓 ‧ 哈佛</a>
+	<a href="https://kennylou92.github.io/tos_story/10456.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10456.jpg" alt="死亡洗禮 ‧ 夏綠蒂">死亡洗禮 ‧ 夏綠蒂</a>
+	<a href="https://kennylou92.github.io/tos_story/10459.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10459.jpg" alt="藤原佐為">藤原佐為</a>
+	<a href="https://kennylou92.github.io/tos_story/10460.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10460.jpg" alt="伊角慎一郎">伊角慎一郎</a>
+	<a href="https://kennylou92.github.io/tos_story/10461.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10461.jpg" alt="永遠的勁敵 ‧ 塔矢亮">永遠的勁敵 ‧ 塔矢亮</a>
+	<a href="https://kennylou92.github.io/tos_story/10462.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10462.jpg" alt="最強的初段 ‧ 進藤光">最強的初段 ‧ 進藤光</a>
+	<a href="https://kennylou92.github.io/tos_story/10463.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10463.jpg" alt="和谷義高">和谷義高</a>
+	<a href="https://kennylou92.github.io/tos_story/10464.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10464.jpg" alt="越智康介">越智康介</a>
+	<a href="https://kennylou92.github.io/tos_story/10465.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10465.jpg" alt="奈瀨明日美">奈瀨明日美</a>
+	<a href="https://kennylou92.github.io/tos_story/10468.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10468.jpg" alt="藤崎明">藤崎明</a>
+	<a href="https://kennylou92.github.io/tos_story/10472.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10472.jpg" alt="倉田厚">倉田厚</a>
+	<a href="https://kennylou92.github.io/tos_story/10473.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10473.jpg" alt="緒方精次">緒方精次</a>
+	<a href="https://kennylou92.github.io/tos_story/10474.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10474.jpg" alt="塔矢行洋">塔矢行洋</a>
+	<a href="https://kennylou92.github.io/tos_story/10480.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10480.jpg" alt="豔光游蛇 ‧ 安潔莉娜">豔光游蛇 ‧ 安潔莉娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10481.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10481.jpg" alt="枯骨哀弦 ‧ 夏彥">枯骨哀弦 ‧ 夏彥</a>
+	<a href="https://kennylou92.github.io/tos_story/10486.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10486.jpg" alt="永駐的仿魂 ‧ 亞當">永駐的仿魂 ‧ 亞當</a>
+	<a href="https://kennylou92.github.io/tos_story/10487.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10487.jpg" alt="遐想奇獸 ‧ 幻鯨">遐想奇獸 ‧ 幻鯨</a>
+	<a href="https://kennylou92.github.io/tos_story/10489.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10489.jpg" alt="時代領演 ‧ 莎士比亞">時代領演 ‧ 莎士比亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10490.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10490.jpg" alt="橫空護師 ‧ 樂樂">橫空護師 ‧ 樂樂</a>
+	<a href="https://kennylou92.github.io/tos_story/10491.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10491.jpg" alt="月夜黑貓團 ‧ 小幸">月夜黑貓團 ‧ 小幸</a>
+	<a href="https://kennylou92.github.io/tos_story/10492.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10492.jpg" alt="閃光一劍 ‧ 亞絲娜">閃光一劍 ‧ 亞絲娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10493.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10493.jpg" alt="巨斧戰士 ‧ 艾基爾">巨斧戰士 ‧ 艾基爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10494.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10494.jpg" alt="虛擬導航 ‧ 結衣">虛擬導航 ‧ 結衣</a>
+	<a href="https://kennylou92.github.io/tos_story/10495.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10495.jpg" alt="黑色劍士 ‧ 桐人">黑色劍士 ‧ 桐人</a>
+	<a href="https://kennylou92.github.io/tos_story/10496.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10496.jpg" alt="風林火山 ‧ 克萊因">風林火山 ‧ 克萊因</a>
+	<a href="https://kennylou92.github.io/tos_story/10497.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10497.jpg" alt="龍使 ‧ 西莉卡">龍使 ‧ 西莉卡</a>
+	<a href="https://kennylou92.github.io/tos_story/10498.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10498.jpg" alt="鍛造師 ‧ 莉茲貝特">鍛造師 ‧ 莉茲貝特</a>
+	<a href="https://kennylou92.github.io/tos_story/10499.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10499.jpg" alt="魔法劍士 ‧ 莉法">魔法劍士 ‧ 莉法</a>
+	<a href="https://kennylou92.github.io/tos_story/10500.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10500.jpg" alt="神弓箭手 ‧ 詩音">神弓箭手 ‧ 詩音</a>
+	<a href="https://kennylou92.github.io/tos_story/10501.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10501.jpg" alt="絕劍 ‧ 有紀">絕劍 ‧ 有紀</a>
+	<a href="https://kennylou92.github.io/tos_story/10502.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10502.jpg" alt="水精靈 ‧ 朱涅">水精靈 ‧ 朱涅</a>
+	<a href="https://kennylou92.github.io/tos_story/10503.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10503.jpg" alt="風精靈領主 ‧ 朔夜">風精靈領主 ‧ 朔夜</a>
+	<a href="https://kennylou92.github.io/tos_story/10504.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10504.jpg" alt="貓精靈領主 ‧ 亞麗莎">貓精靈領主 ‧ 亞麗莎</a>
+	<a href="https://kennylou92.github.io/tos_story/10505.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10505.jpg" alt="狂戰士補師 ‧ 亞絲娜">狂戰士補師 ‧ 亞絲娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10506.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10506.jpg" alt="守衛精靈 ‧ 桐人">守衛精靈 ‧ 桐人</a>
+	<a href="https://kennylou92.github.io/tos_story/10508.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10508.jpg" alt="雜燴兔">雜燴兔</a>
+	<a href="https://kennylou92.github.io/tos_story/10509.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10509.jpg" alt="希茲克利夫">希茲克利夫</a>
+	<a href="https://kennylou92.github.io/tos_story/10510.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10510.jpg" alt="閃耀魔眼">閃耀魔眼</a>
+	<a href="https://kennylou92.github.io/tos_story/10511.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10511.jpg" alt="骸骨獵殺者">骸骨獵殺者</a>
+	<a href="https://kennylou92.github.io/tos_story/10512.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10512.jpg" alt="克拉帝爾">克拉帝爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10513.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10513.jpg" alt="羅莎莉雅">羅莎莉雅</a>
+	<a href="https://kennylou92.github.io/tos_story/10514.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10514.jpg" alt="精靈王奧伯龍">精靈王奧伯龍</a>
+	<a href="https://kennylou92.github.io/tos_story/10515.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10515.jpg" alt="魔王黑巨人">魔王黑巨人</a>
+	<a href="https://kennylou92.github.io/tos_story/10516.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10516.jpg" alt="冰之狙擊手 ‧ 詩音">冰之狙擊手 ‧ 詩音</a>
+	<a href="https://kennylou92.github.io/tos_story/10517.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10517.jpg" alt="光劍神槍 ‧ 桐人">光劍神槍 ‧ 桐人</a>
+	<a href="https://kennylou92.github.io/tos_story/10518.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10518.jpg" alt="死槍">死槍</a>
+	<a href="https://kennylou92.github.io/tos_story/10519.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10519.jpg" alt="蒼穹破曉 ‧ 蒼璧">蒼穹破曉 ‧ 蒼璧</a>
+	<a href="https://kennylou92.github.io/tos_story/10520.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10520.jpg" alt="焰硝炮擊 ‧ 南納">焰硝炮擊 ‧ 南納</a>
+	<a href="https://kennylou92.github.io/tos_story/10556.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10556.jpg" alt="真理賢士 ‧ 密米爾">真理賢士 ‧ 密米爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10558.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10558.jpg" alt="邪端的聖女 ‧ 蘇菲">邪端的聖女 ‧ 蘇菲</a>
+	<a href="https://kennylou92.github.io/tos_story/10560.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10560.jpg" alt="共鳴渦漩 ‧ 諾瓦利斯與烏蘇拉">共鳴渦漩 ‧ 諾瓦利斯與烏蘇拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10561.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10561.jpg" alt="震源預知 ‧ 阿加雷斯">震源預知 ‧ 阿加雷斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10577.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10577.jpg" alt="西撒・A・齊貝林">西撒・A・齊貝林</a>
+	<a href="https://kennylou92.github.io/tos_story/10578.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10578.jpg" alt="穆罕默德 ‧ 阿布德爾與紅色魔術師">穆罕默德 ‧ 阿布德爾與紅色魔術師</a>
+	<a href="https://kennylou92.github.io/tos_story/10579.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10579.jpg" alt="喬瑟夫 ‧ 喬斯達">喬瑟夫 ‧ 喬斯達</a>
+	<a href="https://kennylou92.github.io/tos_story/10580.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10580.jpg" alt="喬納森 ‧ 喬斯達">喬納森 ‧ 喬斯達</a>
+	<a href="https://kennylou92.github.io/tos_story/10581.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10581.jpg" alt="空條承太郎與白金之星">空條承太郎與白金之星</a>
+	<a href="https://kennylou92.github.io/tos_story/10582.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10582.jpg" alt="簡 ‧ 皮耶爾 ‧ 波魯那雷夫與銀色戰車">簡 ‧ 皮耶爾 ‧ 波魯那雷夫與銀色戰車</a>
+	<a href="https://kennylou92.github.io/tos_story/10583.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10583.jpg" alt="花京院典明與綠色法皇">花京院典明與綠色法皇</a>
+	<a href="https://kennylou92.github.io/tos_story/10584.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10584.jpg" alt="伊奇與愚者">伊奇與愚者</a>
+	<a href="https://kennylou92.github.io/tos_story/10585.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10585.jpg" alt="羅伯特 ‧ E ‧ O ‧ 史比特瓦根">羅伯特 ‧ E ‧ O ‧ 史比特瓦根</a>
+	<a href="https://kennylou92.github.io/tos_story/10587.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10587.jpg" alt="艾莉娜">艾莉娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10588.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10588.jpg" alt="威爾・A・齊貝林">威爾・A・齊貝林</a>
+	<a href="https://kennylou92.github.io/tos_story/10589.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10589.jpg" alt="迪奧・布朗度">迪奧・布朗度</a>
+	<a href="https://kennylou92.github.io/tos_story/10590.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10590.jpg" alt="莉莎莉莎">莉莎莉莎</a>
+	<a href="https://kennylou92.github.io/tos_story/10591.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10591.jpg" alt="瓦姆烏">瓦姆烏</a>
+	<a href="https://kennylou92.github.io/tos_story/10592.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10592.jpg" alt="艾特西">艾特西</a>
+	<a href="https://kennylou92.github.io/tos_story/10593.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10593.jpg" alt="卡茲">卡茲</a>
+	<a href="https://kennylou92.github.io/tos_story/10594.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10594.jpg" alt="喬瑟夫 ‧ 喬斯達與隱者之紫">喬瑟夫 ‧ 喬斯達與隱者之紫</a>
+	<a href="https://kennylou92.github.io/tos_story/10595.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10595.jpg" alt="荷爾 ‧ 荷斯與皇帝">荷爾 ‧ 荷斯與皇帝</a>
+	<a href="https://kennylou92.github.io/tos_story/10596.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10596.jpg" alt="佩特夏與荷魯斯">佩特夏與荷魯斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10597.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10597.jpg" alt="瓦尼拉 ‧ 艾斯與亞空瘴氣">瓦尼拉 ‧ 艾斯與亞空瘴氣</a>
+	<a href="https://kennylou92.github.io/tos_story/10598.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10598.jpg" alt="DIO與世界">DIO與世界</a>
+	<a href="https://kennylou92.github.io/tos_story/10599.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10599.jpg" alt="浮掠凌嘯 ‧ 黑風妖">浮掠凌嘯 ‧ 黑風妖</a>
+	<a href="https://kennylou92.github.io/tos_story/10604.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10604.jpg" alt="東和帝姬 ‧ 月下瞳">東和帝姬 ‧ 月下瞳</a>
+	<a href="https://kennylou92.github.io/tos_story/10605.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10605.jpg" alt="星火鱗跡 ‧ 奇行飛蛾">星火鱗跡 ‧ 奇行飛蛾</a>
+	<a href="https://kennylou92.github.io/tos_story/10606.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10606.jpg" alt="魅綃剪翅 ‧ 妖濤蜻蜓">魅綃剪翅 ‧ 妖濤蜻蜓</a>
+	<a href="https://kennylou92.github.io/tos_story/10608.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10608.jpg" alt="清貧洗志 ‧ 比干">清貧洗志 ‧ 比干</a>
+	<a href="https://kennylou92.github.io/tos_story/10609.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10609.jpg" alt="萬貫江山 ‧ 守財真君">萬貫江山 ‧ 守財真君</a>
+	<a href="https://kennylou92.github.io/tos_story/10610.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10610.jpg" alt="赤綃雲煙 ‧ 紅娘">赤綃雲煙 ‧ 紅娘</a>
+	<a href="https://kennylou92.github.io/tos_story/10612.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10612.jpg" alt="馭蜂特工 ‧ 史嘉蕾">馭蜂特工 ‧ 史嘉蕾</a>
+	<a href="https://kennylou92.github.io/tos_story/10613.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10613.jpg" alt="猛鐮行軍 ‧ 機械螞蟻">猛鐮行軍 ‧ 機械螞蟻</a>
+	<a href="https://kennylou92.github.io/tos_story/10616.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10616.jpg" alt="聖凡意志 ‧ 普羅米修斯">聖凡意志 ‧ 普羅米修斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10617.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10617.jpg" alt="琉彩晶結 ‧ 尼祿">琉彩晶結 ‧ 尼祿</a>
+	<a href="https://kennylou92.github.io/tos_story/10620.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10620.jpg" alt="貪嗔癡愛 ‧ 潘金蓮">貪嗔癡愛 ‧ 潘金蓮</a>
+	<a href="https://kennylou92.github.io/tos_story/10621.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10621.jpg" alt="桃鈴艷才 ‧ 陳圓圓">桃鈴艷才 ‧ 陳圓圓</a>
+	<a href="https://kennylou92.github.io/tos_story/10622.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10622.jpg" alt="紅顏敕令 ‧ 林黛玉">紅顏敕令 ‧ 林黛玉</a>
+	<a href="https://kennylou92.github.io/tos_story/10623.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10623.jpg" alt="綺麗代價 ‧ 趙飛燕">綺麗代價 ‧ 趙飛燕</a>
+	<a href="https://kennylou92.github.io/tos_story/10624.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10624.jpg" alt="狂飆捕殺 ‧ 上官婉兒">狂飆捕殺 ‧ 上官婉兒</a>
+	<a href="https://kennylou92.github.io/tos_story/10625.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10625.jpg" alt="竹華夢禍 ‧ 孟姜女">竹華夢禍 ‧ 孟姜女</a>
+	<a href="https://kennylou92.github.io/tos_story/10626.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10626.jpg" alt="崢嶸強梁 ‧ 王英">崢嶸強梁 ‧ 王英</a>
+	<a href="https://kennylou92.github.io/tos_story/10627.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10627.jpg" alt="巾幗女傑 ‧ 扈三娘">巾幗女傑 ‧ 扈三娘</a>
+	<a href="https://kennylou92.github.io/tos_story/10628.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10628.jpg" alt="驅役律令 ‧ 賈寶玉">驅役律令 ‧ 賈寶玉</a>
+	<a href="https://kennylou92.github.io/tos_story/10629.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10629.jpg" alt="禁斷戒途 ‧ 西門慶">禁斷戒途 ‧ 西門慶</a>
+	<a href="https://kennylou92.github.io/tos_story/10630.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10630.jpg" alt="聖神執傲 ‧ 塞墨勒">聖神執傲 ‧ 塞墨勒</a>
+	<a href="https://kennylou92.github.io/tos_story/10631.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10631.jpg" alt="睿博異瞳 ‧ 布提斯">睿博異瞳 ‧ 布提斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10632.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10632.jpg" alt="凜風主帥 ‧ 波雷阿斯">凜風主帥 ‧ 波雷阿斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10634.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10634.jpg" alt="晨暉龍諭 ‧ 里昂">晨暉龍諭 ‧ 里昂</a>
+	<a href="https://kennylou92.github.io/tos_story/10635.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10635.jpg" alt="天軸握殺 ‧ 畸異生命">天軸握殺 ‧ 畸異生命</a>
+	<a href="https://kennylou92.github.io/tos_story/10636.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10636.jpg" alt="緋村劍心">緋村劍心</a>
+	<a href="https://kennylou92.github.io/tos_story/10637.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10637.jpg" alt="相樂左之助">相樂左之助</a>
+	<a href="https://kennylou92.github.io/tos_story/10638.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10638.jpg" alt="神谷薰">神谷薰</a>
+	<a href="https://kennylou92.github.io/tos_story/10639.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10639.jpg" alt="齋藤一">齋藤一</a>
+	<a href="https://kennylou92.github.io/tos_story/10640.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10640.jpg" alt="三條燕">三條燕</a>
+	<a href="https://kennylou92.github.io/tos_story/10641.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10641.jpg" alt="明神彌彥">明神彌彥</a>
+	<a href="https://kennylou92.github.io/tos_story/10642.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10642.jpg" alt="高荷惠">高荷惠</a>
+	<a href="https://kennylou92.github.io/tos_story/10643.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10643.jpg" alt="比留間喜兵衛與比留間伍兵衛">比留間喜兵衛與比留間伍兵衛</a>
+	<a href="https://kennylou92.github.io/tos_story/10644.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10644.jpg" alt="鵜堂刃衛">鵜堂刃衛</a>
+	<a href="https://kennylou92.github.io/tos_story/10647.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10647.jpg" alt="石動雷十太">石動雷十太</a>
+	<a href="https://kennylou92.github.io/tos_story/10648.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10648.jpg" alt="月岡津南">月岡津南</a>
+	<a href="https://kennylou92.github.io/tos_story/10649.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10649.jpg" alt="惡見">惡見</a>
+	<a href="https://kennylou92.github.io/tos_story/10650.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10650.jpg" alt="火男">火男</a>
+	<a href="https://kennylou92.github.io/tos_story/10651.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10651.jpg" alt="式尉">式尉</a>
+	<a href="https://kennylou92.github.io/tos_story/10652.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10652.jpg" alt="四乃森蒼紫">四乃森蒼紫</a>
+	<a href="https://kennylou92.github.io/tos_story/10653.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10653.jpg" alt="般若">般若</a>
+	<a href="https://kennylou92.github.io/tos_story/10654.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10654.jpg" alt="武田觀柳">武田觀柳</a>
+	<a href="https://kennylou92.github.io/tos_story/10657.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10657.jpg" alt="悖離航道 ‧ 勞拉">悖離航道 ‧ 勞拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10658.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10658.jpg" alt="星際巡邏 ‧ 蒙大拿">星際巡邏 ‧ 蒙大拿</a>
+	<a href="https://kennylou92.github.io/tos_story/10660.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10660.jpg" alt="正義掌舵 ‧ 斯卡塔赫">正義掌舵 ‧ 斯卡塔赫</a>
+	<a href="https://kennylou92.github.io/tos_story/10661.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10661.jpg" alt="銀河暸望 ‧ 羅莎琳">銀河暸望 ‧ 羅莎琳</a>
+	<a href="https://kennylou92.github.io/tos_story/10662.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10662.jpg" alt="磁脈轟擊 ‧ 克卜勒">磁脈轟擊 ‧ 克卜勒</a>
+	<a href="https://kennylou92.github.io/tos_story/10663.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10663.jpg" alt="永絕歸途 ‧ 努亞達">永絕歸途 ‧ 努亞達</a>
+	<a href="https://kennylou92.github.io/tos_story/10664.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10664.jpg" alt="械心慮世 ‧ 伽瑪">械心慮世 ‧ 伽瑪</a>
+	<a href="https://kennylou92.github.io/tos_story/10665.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10665.jpg" alt="炸裂波動 ‧ 伽羅瓦">炸裂波動 ‧ 伽羅瓦</a>
+	<a href="https://kennylou92.github.io/tos_story/10666.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10666.jpg" alt="星雲離歌 ‧ 西塔">星雲離歌 ‧ 西塔</a>
+	<a href="https://kennylou92.github.io/tos_story/10667.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10667.jpg" alt="無盡宇航 ‧ 俄亥俄">無盡宇航 ‧ 俄亥俄</a>
+	<a href="https://kennylou92.github.io/tos_story/10672.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10672.jpg" alt="天命之王佛挪">天命之王佛挪</a>
+	<a href="https://kennylou92.github.io/tos_story/10673.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10673.jpg" alt="漆黑魔女凱斯莉">漆黑魔女凱斯莉</a>
+	<a href="https://kennylou92.github.io/tos_story/10674.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10674.jpg" alt="暴走姆特貓">暴走姆特貓</a>
+	<a href="https://kennylou92.github.io/tos_story/10675.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10675.jpg" alt="貓咪女王">貓咪女王</a>
+	<a href="https://kennylou92.github.io/tos_story/10676.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10676.jpg" alt="神">神</a>
+	<a href="https://kennylou92.github.io/tos_story/10677.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10677.jpg" alt="真．拉斯沃斯">真．拉斯沃斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10679.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10679.jpg" alt="貓咪">貓咪</a>
+	<a href="https://kennylou92.github.io/tos_story/10680.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10680.jpg" alt="坦克貓">坦克貓</a>
+	<a href="https://kennylou92.github.io/tos_story/10681.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10681.jpg" alt="戰鬥貓">戰鬥貓</a>
+	<a href="https://kennylou92.github.io/tos_story/10682.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10682.jpg" alt="黃金貓">黃金貓</a>
+	<a href="https://kennylou92.github.io/tos_story/10688.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10688.jpg" alt="刀兵掠陣 ‧ 黃帝">刀兵掠陣 ‧ 黃帝</a>
+	<a href="https://kennylou92.github.io/tos_story/10689.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10689.jpg" alt="迷宮守捍 ‧ 心魔小魚">迷宮守捍 ‧ 心魔小魚</a>
+	<a href="https://kennylou92.github.io/tos_story/10690.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10690.jpg" alt="山田淺右衛門仙汰">山田淺右衛門仙汰</a>
+	<a href="https://kennylou92.github.io/tos_story/10691.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10691.jpg" alt="畫眉丸">畫眉丸</a>
+	<a href="https://kennylou92.github.io/tos_story/10692.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10692.jpg" alt="山田淺右衛門佐切">山田淺右衛門佐切</a>
+	<a href="https://kennylou92.github.io/tos_story/10693.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10693.jpg" alt="亞左弔兵衛">亞左弔兵衛</a>
+	<a href="https://kennylou92.github.io/tos_story/10694.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10694.jpg" alt="山田淺右衛門桐馬">山田淺右衛門桐馬</a>
+	<a href="https://kennylou92.github.io/tos_story/10695.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10695.jpg" alt="山田淺右衛門典坐">山田淺右衛門典坐</a>
+	<a href="https://kennylou92.github.io/tos_story/10696.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10696.jpg" alt="山田淺右衛門士遠">山田淺右衛門士遠</a>
+	<a href="https://kennylou92.github.io/tos_story/10697.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10697.jpg" alt="山田淺右衛門付知">山田淺右衛門付知</a>
+	<a href="https://kennylou92.github.io/tos_story/10698.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10698.jpg" alt="奴凱">奴凱</a>
+	<a href="https://kennylou92.github.io/tos_story/10699.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10699.jpg" alt="陸郎太">陸郎太</a>
+	<a href="https://kennylou92.github.io/tos_story/10700.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10700.jpg" alt="畫眉丸的妻子">畫眉丸的妻子</a>
+	<a href="https://kennylou92.github.io/tos_story/10701.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10701.jpg" alt="杠">杠</a>
+	<a href="https://kennylou92.github.io/tos_story/10702.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10702.jpg" alt="梅">梅</a>
+	<a href="https://kennylou92.github.io/tos_story/10703.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10703.jpg" alt="民谷巖鐵齋">民谷巖鐵齋</a>
+	<a href="https://kennylou92.github.io/tos_story/10704.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10704.jpg" alt="慶雲">慶雲</a>
+	<a href="https://kennylou92.github.io/tos_story/10705.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10705.jpg" alt="如意元君 ‧ 朱槿">如意元君 ‧ 朱槿</a>
+	<a href="https://kennylou92.github.io/tos_story/10707.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10707.jpg" alt="不空就君 ‧ 牡丹">不空就君 ‧ 牡丹</a>
+	<a href="https://kennylou92.github.io/tos_story/10711.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10711.jpg" alt="斷魂雙刃 ‧ 提爾鋒">斷魂雙刃 ‧ 提爾鋒</a>
+	<a href="https://kennylou92.github.io/tos_story/10712.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10712.jpg" alt="祈譽劍骨 ‧ 格拉墨">祈譽劍骨 ‧ 格拉墨</a>
+	<a href="https://kennylou92.github.io/tos_story/10713.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10713.jpg" alt="凶虐本質 ‧ 押瑪">凶虐本質 ‧ 押瑪</a>
+	<a href="https://kennylou92.github.io/tos_story/10714.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10714.jpg" alt="皓潔伊始 ‧ 所多瑪">皓潔伊始 ‧ 所多瑪</a>
+	<a href="https://kennylou92.github.io/tos_story/10715.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10715.jpg" alt="魘尾疚罪 ‧ 蛾摩拉">魘尾疚罪 ‧ 蛾摩拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10716.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10716.jpg" alt="踏光獠獵 ‧ 瑣珥">踏光獠獵 ‧ 瑣珥</a>
+	<a href="https://kennylou92.github.io/tos_story/10717.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10717.jpg" alt="絕境破蕾 ‧ 丁香">絕境破蕾 ‧ 丁香</a>
+	<a href="https://kennylou92.github.io/tos_story/10718.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10718.jpg" alt="羽化蝶息 ‧ 依凡德 ">羽化蝶息 ‧ 依凡德 </a>
+	<a href="https://kennylou92.github.io/tos_story/10719.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10719.jpg" alt="龍心垂愛 ‧ 米斯特汀">龍心垂愛 ‧ 米斯特汀</a>
+	<a href="https://kennylou92.github.io/tos_story/10727.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10727.jpg" alt="公理推察 ‧ 卡普里歐">公理推察 ‧ 卡普里歐</a>
+	<a href="https://kennylou92.github.io/tos_story/10728.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10728.jpg" alt="甜美鐐刑 ‧ 艾蜜莉">甜美鐐刑 ‧ 艾蜜莉</a>
+	<a href="https://kennylou92.github.io/tos_story/10729.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10729.jpg" alt="病原除錯 ‧ 卡帕">病原除錯 ‧ 卡帕</a>
+	<a href="https://kennylou92.github.io/tos_story/10730.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10730.jpg" alt="龍緣孚佑 ‧ 和氏">龍緣孚佑 ‧ 和氏</a>
+	<a href="https://kennylou92.github.io/tos_story/10731.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10731.jpg" alt="斬魄刑刀 ‧ 莎樂美">斬魄刑刀 ‧ 莎樂美</a>
+	<a href="https://kennylou92.github.io/tos_story/10732.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10732.jpg" alt="獄庭政主 ‧ 賀茂忠行">獄庭政主 ‧ 賀茂忠行</a>
+	<a href="https://kennylou92.github.io/tos_story/10733.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10733.jpg" alt="膨脹貪念 ‧ 魯斯蘭">膨脹貪念 ‧ 魯斯蘭</a>
+	<a href="https://kennylou92.github.io/tos_story/10734.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10734.jpg" alt="肅清惡罪 ‧ 露芙">肅清惡罪 ‧ 露芙</a>
+	<a href="https://kennylou92.github.io/tos_story/10737.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10737.jpg" alt="蒼影">蒼影</a>
+	<a href="https://kennylou92.github.io/tos_story/10738.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10738.jpg" alt="紅丸">紅丸</a>
+	<a href="https://kennylou92.github.io/tos_story/10739.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10739.jpg" alt="哥布達">哥布達</a>
+	<a href="https://kennylou92.github.io/tos_story/10740.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10740.jpg" alt="紫苑">紫苑</a>
+	<a href="https://kennylou92.github.io/tos_story/10741.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10741.jpg" alt="白老">白老</a>
+	<a href="https://kennylou92.github.io/tos_story/10742.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10742.jpg" alt="利姆路 ‧ 坦派斯特">利姆路 ‧ 坦派斯特</a>
+	<a href="https://kennylou92.github.io/tos_story/10744.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10744.jpg" alt="蘭加">蘭加</a>
+	<a href="https://kennylou92.github.io/tos_story/10745.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10745.jpg" alt="戈畢爾">戈畢爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10746.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10746.jpg" alt="井澤靜江">井澤靜江</a>
+	<a href="https://kennylou92.github.io/tos_story/10747.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10747.jpg" alt="朱菜">朱菜</a>
+	<a href="https://kennylou92.github.io/tos_story/10748.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10748.jpg" alt="蓋德">蓋德</a>
+	<a href="https://kennylou92.github.io/tos_story/10749.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10749.jpg" alt="迪亞布羅">迪亞布羅</a>
+	<a href="https://kennylou92.github.io/tos_story/10751.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10751.jpg" alt="暴風龍 ‧ 維爾德拉">暴風龍 ‧ 維爾德拉</a>
+	<a href="https://kennylou92.github.io/tos_story/10753.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10753.jpg" alt="瑪莉安貝爾與格蘭貝爾">瑪莉安貝爾與格蘭貝爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10754.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10754.jpg" alt="紅葉">紅葉</a>
+	<a href="https://kennylou92.github.io/tos_story/10755.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10755.jpg" alt="正幸">正幸</a>
+	<a href="https://kennylou92.github.io/tos_story/10756.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10756.jpg" alt="克雷曼">克雷曼</a>
+	<a href="https://kennylou92.github.io/tos_story/10757.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10757.jpg" alt="菈米莉絲">菈米莉絲</a>
+	<a href="https://kennylou92.github.io/tos_story/10758.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10758.jpg" alt="蜜莉姆 ‧ 拿渥">蜜莉姆 ‧ 拿渥</a>
+	<a href="https://kennylou92.github.io/tos_story/10759.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10759.jpg" alt="日向坂口">日向坂口</a>
+	<a href="https://kennylou92.github.io/tos_story/10760.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10760.jpg" alt="魯米納斯 ‧ 瓦倫泰">魯米納斯 ‧ 瓦倫泰</a>
+	<a href="https://kennylou92.github.io/tos_story/10770.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10770.jpg" alt="真相演算 ‧ 福爾摩斯">真相演算 ‧ 福爾摩斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10771.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10771.jpg" alt="萌鴨緝凶 ‧ 柯南道爾">萌鴨緝凶 ‧ 柯南道爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10772.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10772.jpg" alt="午茶前推理 ‧ 阿嘉莎">午茶前推理 ‧ 阿嘉莎</a>
+	<a href="https://kennylou92.github.io/tos_story/10773.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10773.jpg" alt="卓識斷症 ‧ 華生">卓識斷症 ‧ 華生</a>
+	<a href="https://kennylou92.github.io/tos_story/10774.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10774.jpg" alt="變量釋義 ‧ 莫里亞蒂">變量釋義 ‧ 莫里亞蒂</a>
+	<a href="https://kennylou92.github.io/tos_story/10775.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10775.jpg" alt="心理觀測 ‧ 克拉克">心理觀測 ‧ 克拉克</a>
+	<a href="https://kennylou92.github.io/tos_story/10776.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10776.jpg" alt="鋒迴偵查 ‧ 考克斯">鋒迴偵查 ‧ 考克斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10777.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10777.jpg" alt="祈愛的聖女 ‧ 艾莉亞">祈愛的聖女 ‧ 艾莉亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10778.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10778.jpg" alt="永存的賢王 ‧ 猶瑟王">永存的賢王 ‧ 猶瑟王</a>
+	<a href="https://kennylou92.github.io/tos_story/10779.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10779.jpg" alt="新手探員 ‧ 安妮卡">新手探員 ‧ 安妮卡</a>
+	<a href="https://kennylou92.github.io/tos_story/10780.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10780.jpg" alt="皇家女僕長 ‧ 切爾西">皇家女僕長 ‧ 切爾西</a>
+	<a href="https://kennylou92.github.io/tos_story/10781.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10781.jpg" alt="奪首真凶 ‧ 勒克斯">奪首真凶 ‧ 勒克斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10782.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10782.jpg" alt="前線指揮 ‧ 雷斯垂德">前線指揮 ‧ 雷斯垂德</a>
+	<a href="https://kennylou92.github.io/tos_story/10783.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10783.jpg" alt="榮冕降臨 ‧ 查爾斯">榮冕降臨 ‧ 查爾斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10784.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10784.jpg" alt="光榮傳遞 ‧ 喬治">光榮傳遞 ‧ 喬治</a>
+	<a href="https://kennylou92.github.io/tos_story/10801.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10801.jpg" alt="Spirit">Spirit</a>
+	<a href="https://kennylou92.github.io/tos_story/10802.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10802.jpg" alt="Shy">Shy</a>
+	<a href="https://kennylou92.github.io/tos_story/10803.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10803.jpg" alt="Lady Black">Lady Black</a>
+	<a href="https://kennylou92.github.io/tos_story/10804.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10804.jpg" alt="天王寺曖">天王寺曖</a>
+	<a href="https://kennylou92.github.io/tos_story/10805.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10805.jpg" alt="眠龍">眠龍</a>
+	<a href="https://kennylou92.github.io/tos_story/10806.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10806.jpg" alt="Century">Century</a>
+	<a href="https://kennylou92.github.io/tos_story/10807.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10807.jpg" alt="Stardust">Stardust</a>
+	<a href="https://kennylou92.github.io/tos_story/10808.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10808.jpg" alt="小石川惟子">小石川惟子</a>
+	<a href="https://kennylou92.github.io/tos_story/10810.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10810.jpg" alt="Stigma">Stigma</a>
+	<a href="https://kennylou92.github.io/tos_story/10811.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10811.jpg" alt="斯維塔">斯維塔</a>
+	<a href="https://kennylou92.github.io/tos_story/10812.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10812.jpg" alt="怒氣">怒氣</a>
+	<a href="https://kennylou92.github.io/tos_story/10813.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10813.jpg" alt="唔呼呼">唔呼呼</a>
+	<a href="https://kennylou92.github.io/tos_story/10814.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10814.jpg" alt="祈願">祈願</a>
+	<a href="https://kennylou92.github.io/tos_story/10815.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10815.jpg" alt="哭哭">哭哭</a>
+	<a href="https://kennylou92.github.io/tos_story/10816.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10816.jpg" alt="空虛">空虛</a>
+	<a href="https://kennylou92.github.io/tos_story/10818.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10818.jpg" alt="蝦翁">蝦翁</a>
+	<a href="https://kennylou92.github.io/tos_story/10828.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10828.jpg" alt="恆定的仿魂 ‧ 莉莉絲">恆定的仿魂 ‧ 莉莉絲</a>
+	<a href="https://kennylou92.github.io/tos_story/10829.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10829.jpg" alt="鋼心鏖戰 ‧ 莉莉絲">鋼心鏖戰 ‧ 莉莉絲</a>
+	<a href="https://kennylou92.github.io/tos_story/10835.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10835.jpg" alt="凜潔意氣 ‧ 甄珂">凜潔意氣 ‧ 甄珂</a>
+	<a href="https://kennylou92.github.io/tos_story/10836.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10836.jpg" alt="雷鞭銳網 ‧ 凌笙">雷鞭銳網 ‧ 凌笙</a>
+	<a href="https://kennylou92.github.io/tos_story/10837.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10837.jpg" alt="生靈塗炭 ‧ 胡射山邪祟">生靈塗炭 ‧ 胡射山邪祟</a>
+	<a href="https://kennylou92.github.io/tos_story/10838.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10838.jpg" alt="極惡凶煞 ‧ 不周山邪祟 (魔)">極惡凶煞 ‧ 不周山邪祟 (魔)</a>
+	<a href="https://kennylou92.github.io/tos_story/10839.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10839.jpg" alt="極惡凶煞 ‧ 不周山邪祟 (獸)">極惡凶煞 ‧ 不周山邪祟 (獸)</a>
+	<a href="https://kennylou92.github.io/tos_story/10840.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10840.jpg" alt="極惡凶煞 ‧ 不周山邪祟 (龍)">極惡凶煞 ‧ 不周山邪祟 (龍)</a>
+	<a href="https://kennylou92.github.io/tos_story/10843.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10843.jpg" alt="寳塔護陣 ‧ 炎帝">寳塔護陣 ‧ 炎帝</a>
+	<a href="https://kennylou92.github.io/tos_story/10852.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10852.jpg" alt="雷姆">雷姆</a>
+	<a href="https://kennylou92.github.io/tos_story/10854.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10854.jpg" alt="拉姆">拉姆</a>
+	<a href="https://kennylou92.github.io/tos_story/10855.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10855.jpg" alt="奧托 ‧ 蘇文與菲魯菲">奧托 ‧ 蘇文與菲魯菲</a>
+	<a href="https://kennylou92.github.io/tos_story/10856.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10856.jpg" alt="菲魯特">菲魯特</a>
+	<a href="https://kennylou92.github.io/tos_story/10857.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10857.jpg" alt="愛蜜莉雅與帕克">愛蜜莉雅與帕克</a>
+	<a href="https://kennylou92.github.io/tos_story/10858.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10858.jpg" alt="庫珥修 ‧ 卡爾斯騰與菲莉絲">庫珥修 ‧ 卡爾斯騰與菲莉絲</a>
+	<a href="https://kennylou92.github.io/tos_story/10859.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10859.jpg" alt="菜月昴">菜月昴</a>
+	<a href="https://kennylou92.github.io/tos_story/10860.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10860.jpg" alt="碧翠絲">碧翠絲</a>
+	<a href="https://kennylou92.github.io/tos_story/10861.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10861.jpg" alt="白鯨">白鯨</a>
+	<a href="https://kennylou92.github.io/tos_story/10862.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10862.jpg" alt="特蕾西亞 ‧ 范 ‧ 阿斯特雷亞">特蕾西亞 ‧ 范 ‧ 阿斯特雷亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10863.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10863.jpg" alt="威爾海姆 ‧ 范 ‧ 阿斯特雷亞">威爾海姆 ‧ 范 ‧ 阿斯特雷亞</a>
+	<a href="https://kennylou92.github.io/tos_story/10864.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10864.jpg" alt="由里烏斯 ‧ 尤克歷烏斯">由里烏斯 ‧ 尤克歷烏斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10865.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10865.jpg" alt="羅茲瓦爾 ‧ L ‧ 梅札斯">羅茲瓦爾 ‧ L ‧ 梅札斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10866.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10866.jpg" alt="梅莉 ‧ 波特魯特">梅莉 ‧ 波特魯特</a>
+	<a href="https://kennylou92.github.io/tos_story/10867.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10867.jpg" alt="艾爾莎 ‧ 葛蘭西爾特">艾爾莎 ‧ 葛蘭西爾特</a>
+	<a href="https://kennylou92.github.io/tos_story/10868.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10868.jpg" alt="大兔">大兔</a>
+	<a href="https://kennylou92.github.io/tos_story/10869.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10869.jpg" alt="加菲爾 ‧ 汀澤爾">加菲爾 ‧ 汀澤爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10870.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10870.jpg" alt="貝特魯吉烏斯 ‧ 羅曼尼康帝">貝特魯吉烏斯 ‧ 羅曼尼康帝</a>
+	<a href="https://kennylou92.github.io/tos_story/10871.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10871.jpg" alt="艾姬多娜">艾姬多娜</a>
+	<a href="https://kennylou92.github.io/tos_story/10874.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10874.jpg" alt="命運歡樂頌 ‧ 貝多芬">命運歡樂頌 ‧ 貝多芬</a>
+	<a href="https://kennylou92.github.io/tos_story/10875.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10875.jpg" alt="無調性和聲 ‧ 莫札特">無調性和聲 ‧ 莫札特</a>
+	<a href="https://kennylou92.github.io/tos_story/10876.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10876.jpg" alt="調律享頌樂 ‧ 舒伯特">調律享頌樂 ‧ 舒伯特</a>
+	<a href="https://kennylou92.github.io/tos_story/10877.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10877.jpg" alt="悖德夢幻曲 ‧ 舒曼">悖德夢幻曲 ‧ 舒曼</a>
+	<a href="https://kennylou92.github.io/tos_story/10878.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10878.jpg" alt="啟迪旋律線 ‧ 海頓">啟迪旋律線 ‧ 海頓</a>
+	<a href="https://kennylou92.github.io/tos_story/10879.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10879.jpg" alt="獨弦羅曼號 ‧ 柴可夫斯基">獨弦羅曼號 ‧ 柴可夫斯基</a>
+	<a href="https://kennylou92.github.io/tos_story/10881.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10881.jpg" alt="狂熱圓舞曲 ‧ 李斯特">狂熱圓舞曲 ‧ 李斯特</a>
+	<a href="https://kennylou92.github.io/tos_story/10882.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10882.jpg" alt="和諧離別曲 ‧ 蕭邦">和諧離別曲 ‧ 蕭邦</a>
+	<a href="https://kennylou92.github.io/tos_story/10886.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10886.jpg" alt="潛幕謀局 ‧ 雷蒙德">潛幕謀局 ‧ 雷蒙德</a>
+		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+
+</body>
+</html>
