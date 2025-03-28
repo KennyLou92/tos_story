@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
             intervalId = setInterval(() => {
                 currentIndex = (currentIndex + 1) % hoverImages.length;
                 img.src = hoverImages[currentIndex];
-            }, 500); // 每 500 毫秒換一張
+            }, 300); // 每 500 毫秒換一張
         });
 
         img.addEventListener("mouseout", function () {
