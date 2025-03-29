@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聖鬥士星矢第一彈</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 50px; /* 圖片大小 */
+            height: 50px;
+            margin-bottom: 5px;
+        }
+
+        .button-container a img { <!--換圖 ，CSS在hoverEffect.js-->
+            transition: 0.3s;
+        }
+.sidebar a {
+	display: flex;  /* 讓圖片與文字並排 */
+	align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-size: 18px; /* 🔹 可以調整字體大小 */
+}
+
+.sidebar a img {
+	margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+    <!-- <h1>通行證</h1> -->
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <div class="sidebar" id = "sidebar">
+    <a href="https://kennylou92.github.io/tos_story/crossover.html">🏠 回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src="https://i.postimg.cc/H8XgVKbB/20001-S.png" alt="以諾時代">以諾時代</a>
+	<a href="https://kennylou92.github.io/tos_story/newera.html"><img src="https://i.postimg.cc/K1JyktgS/20003-S.png"  alt="嶄新時代">嶄新時代</a>
+    <a href="https://kennylou92.github.io/tos_story/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="獨立卡匣">獨立卡匣</a>
+	<a href="https://kennylou92.github.io/tos_story/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="通行證">合作</a>
+	<a href="https://kennylou92.github.io/tos_story/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="通行證">通行證</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story/2101.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2101.jpg" data-hover = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2102.jpg' alt="天鵝座 ‧ 冰河">天鵝座 ‧ 冰河</a>
+	<a href="https://kennylou92.github.io/tos_story/2103.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2103.jpg" data-hover = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2104.jpg' alt="鳳凰座 ‧ 一輝">鳳凰座 ‧ 一輝</a>
+	<a href="https://kennylou92.github.io/tos_story/2105.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2105.jpg" data-hover = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2106.jpg' alt="天龍座 ‧ 紫龍">天龍座 ‧ 紫龍</a>
+	<a href="https://kennylou92.github.io/tos_story/2107.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2107.jpg" data-hover = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2108.jpg' alt="天馬座 ‧ 星矢">天馬座 ‧ 星矢</a>
+	<a href="https://kennylou92.github.io/tos_story/2109.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2109.jpg" data-hover = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2110.jpg' alt="仙女座 ‧ 瞬">仙女座 ‧ 瞬</a>
+	<a href="https://kennylou92.github.io/tos_story/2111.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2111.jpg" alt="水瓶座 ‧ 卡妙">水瓶座 ‧ 卡妙</a>
+	<a href="https://kennylou92.github.io/tos_story/2112.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2112.jpg" alt="摩羯座 ‧ 修羅">摩羯座 ‧ 修羅</a>
+	<a href="https://kennylou92.github.io/tos_story/2113.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2113.jpg" alt="獅子座 ‧ 艾奧里亞">獅子座 ‧ 艾奧里亞</a>
+	<a href="https://kennylou92.github.io/tos_story/2114.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2114.jpg" alt="雙魚座 ‧ 阿布羅狄">雙魚座 ‧ 阿布羅狄</a>
+	<a href="https://kennylou92.github.io/tos_story/2115.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2115.jpg" alt="金牛座 ‧ 阿爾德巴朗">金牛座 ‧ 阿爾德巴朗</a>
+	<a href="https://kennylou92.github.io/tos_story/2116.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2116.jpg" alt="雅典娜 ‧ 城戶沙織">雅典娜 ‧ 城戶沙織</a>
+	<a href="https://kennylou92.github.io/tos_story/2117.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2117.jpg" alt="巨蟹座 ‧ 迪斯馬斯古">巨蟹座 ‧ 迪斯馬斯古</a>
+	<a href="https://kennylou92.github.io/tos_story/2118.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2118.jpg" alt="天蠍座 ‧ 米羅">天蠍座 ‧ 米羅</a>
+	<a href="https://kennylou92.github.io/tos_story/2120.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2120.jpg" alt="處女座 ‧ 沙加">處女座 ‧ 沙加</a>
+	<a href="https://kennylou92.github.io/tos_story/2121.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2121.jpg" alt="雙子座 ‧ 撒卡">雙子座 ‧ 撒卡</a>
+	<a href="https://kennylou92.github.io/tos_story/2122.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2122.jpg" alt="白羊座 ‧ 希歐">白羊座 ‧ 希歐</a>
+	<a href="https://kennylou92.github.io/tos_story/2123.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2123.jpg" alt="白羊座 ‧ 穆">白羊座 ‧ 穆</a>
+	<a href="https://kennylou92.github.io/tos_story/2124.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2124.jpg" alt="天秤座 ‧ 童虎">天秤座 ‧ 童虎</a>
+	<a href="https://kennylou92.github.io/tos_story/2125.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2125.jpg" alt="射手座 ‧ 艾奧羅斯">射手座 ‧ 艾奧羅斯</a>
+	<a href="https://kennylou92.github.io/tos_story/2126.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2126.jpg" alt="天鷹座 ‧ 魔鈴">天鷹座 ‧ 魔鈴</a>
+	<a href="https://kennylou92.github.io/tos_story/2127.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2127.jpg" alt="蛇夫座 ‧ 夏依娜">蛇夫座 ‧ 夏依娜</a>
+<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+	
+	<script src="https://kennylou92.github.io/tos_story/hoverEffect.js"></script>
+</body>
+</html>
