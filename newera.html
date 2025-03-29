@@ -38,6 +38,21 @@
             height: 50px;
             margin-bottom: 5px;
         }
+		.sidebar a {
+			display: flex;  /* 讓圖片與文字並排 */
+			align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+			text-decoration: none;
+			color: black;
+			padding: 10px;
+			font-size: 18px; /* 🔹 可以調整字體大小 */
+		}
+
+		.sidebar a img {
+			margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+			width: 50px;
+			height: 50px;
+			vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+		}
     </style>
 	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
 </head>
@@ -45,7 +60,7 @@
 	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
 	<div class="sidebar" id = "sidebar">
 	<a href="https://kennylou92.github.io/tos_story/">🏠回主頁</a>
-	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src = 'https://i.postimg.cc/H8XgVKbB/20001-S.png' width='50' height='50'><br>以諾時代</a>
+	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src = 'https://i.postimg.cc/H8XgVKbB/20001-S.png' ><br>以諾時代</a>
 	</div>
     <div class="button-container">
 	<a href="https://kennylou92.github.io/tos_story/10036.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10036.jpg" alt="巧舌饞涎 ‧ 柯柯">巧舌饞涎 ‧ 柯柯</a>
