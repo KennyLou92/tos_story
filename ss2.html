@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聖鬥士星矢第二彈</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 50px; /* 圖片大小 */
+            height: 50px;
+            margin-bottom: 5px;
+        }
+		
+        .button-container a img { <!--換圖 ，CSS在hoverEffect.js-->
+            transition: 0.3s;
+        }
+		
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+    <!-- <h1>通行證</h1> -->
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <div class="sidebar" id = "sidebar">
+    <a href="https://kennylou92.github.io/tos_story/">🏠 回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/kamenrider.html"><img src = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2704.jpg' width='50' height='50'><br>假面騎士</a>
+	<a href="https://kennylou92.github.io/tos_story/shy.html"><img src = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10802.jpg' width='50' height='50'><br>腼腆英雄</a>
+	<a href="https://kennylou92.github.io/tos_story/slime.html"><img src = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10750.jpg' width='50' height='50'><br>關於我穿越到神魔大陸這檔事</a>
+	<a href="https://kennylou92.github.io/tos_story/re0.html"><img src = 'https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10857.jpg' width='50' height='50'><br>Re:0</a>
+	</div>
+    <div class="button-container">
+		<a href="https://kennylou92.github.io/tos_story/10066.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10066.jpg" data-hover = "https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10067.jpg" alt="終極青銅天鵝座 ‧ 冰河">終極青銅天鵝座 ‧ 冰河 </a>
+		<a href="https://kennylou92.github.io/tos_story/10068.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10068.jpg" data-hover = "https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10069.jpg" alt="終極青銅鳳凰座 ‧ 一輝">終極青銅鳳凰座 ‧ 一輝 </a>
+		<a href="https://kennylou92.github.io/tos_story/10070.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10070.jpg" data-hover = "https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10071.jpg" alt="終極青銅天龍座 ‧ 紫龍">終極青銅天龍座 ‧ 紫龍 </a>
+		<a href="https://kennylou92.github.io/tos_story/10072.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10072.jpg" data-hover = "https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10073.jpg" alt="終極青銅天馬座 ‧ 星矢">終極青銅天馬座 ‧ 星矢 </a>
+		<a href="https://kennylou92.github.io/tos_story/10074.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10074.jpg" data-hover = "https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10075nrtnr.jpg" alt="終極青銅仙女座 ‧ 瞬">終極青銅仙女座 ‧ 瞬 </a>
+		
+		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+	
+	<script src="https://kennylou92.github.io/tos_story/hoverEffect.js"></script>
+</body>
+</html>
