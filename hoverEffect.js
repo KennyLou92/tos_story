@@ -7,18 +7,33 @@ document.addEventListener("DOMContentLoaded", function () {
         let currentIndex = 0;
         let intervalId = null;
 
-        // 🔹 只對 alt="艾斯卡諾" 的圖片生效，且時間必須在 07:00~17:59
-        if (img.alt === "艾斯卡諾" && currentHour >= 7 && currentHour < 18) {
+        // 🔹 如果是艾斯卡諾，才加入時間判斷
+        if (img.alt === "艾斯卡諾") {
+            if (currentHour >= 7 && currentHour < 18) {
+                img.addEventListener("mouseover", function () {
+                    intervalId = setInterval(() => {
+                        currentIndex = (currentIndex + 1) % hoverImages.length;
+                        img.src = hoverImages[currentIndex];
+                    }, 500); // 每 500 毫秒換一張
+                });
+
+                img.addEventListener("mouseout", function () {
+                    clearInterval(intervalId); // 停止輪播
+                    img.src = originalSrc; // 恢復原圖
+                });
+            }
+        } else {
+            // 🔹 其他圖片維持原本 hover 效果（沒有時間限制）
             img.addEventListener("mouseover", function () {
                 intervalId = setInterval(() => {
                     currentIndex = (currentIndex + 1) % hoverImages.length;
                     img.src = hoverImages[currentIndex];
-                }, 500); // 每 500 毫秒換一張
+                }, 500);
             });
 
             img.addEventListener("mouseout", function () {
-                clearInterval(intervalId); // 停止輪播
-                img.src = originalSrc; // 恢復原圖
+                clearInterval(intervalId);
+                img.src = originalSrc;
             });
         }
     });
