@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>異邦偵探</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+		.sidebar a {
+			display: flex;  /* 讓圖片與文字並排 */
+			align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+			text-decoration: none;
+			color: black;
+			padding: 10px;
+			font-size: 18px; /* 🔹 可以調整字體大小 */
+		}
+
+		.sidebar a img {
+			margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+			width: 50px;
+			height: 50px;
+			vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+		}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+	<div class="sidebar" id = "sidebar">
+	<a href="https://kennylou92.github.io/tos_story/standalone.html">🏠<br>回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src="https://i.postimg.cc/H8XgVKbB/20001-S.png" alt="以諾時代">以諾時代</a>
+	<a href="https://kennylou92.github.io/tos_story/newera.html"><img src="https://i.postimg.cc/K1JyktgS/20003-S.png"  alt="嶄新時代">嶄新時代</a>
+    <a href="https://kennylou92.github.io/tos_story/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="獨立卡匣">獨立卡匣</a>
+	<a href="https://kennylou92.github.io/tos_story/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="通行證">合作</a>
+	<a href="https://kennylou92.github.io/tos_story/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="通行證">通行證</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story/10770.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10770.jpg" alt="真相演算 ‧ 福爾摩斯">真相演算 ‧ 福爾摩斯</a>
+	<a href="https://kennylou92.github.io/tos_story/10771.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10771.jpg" alt="萌鴨緝凶 ‧ 柯南道爾">萌鴨緝凶 ‧ 柯南道爾</a>
+	<a href="https://kennylou92.github.io/tos_story/10772.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10772.jpg" alt="午茶前推理 ‧ 阿嘉莎">午茶前推理 ‧ 阿嘉莎</a>
+	<a href="https://kennylou92.github.io/tos_story/10773.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10773.jpg" alt="卓識斷症 ‧ 華生">卓識斷症 ‧ 華生</a>
+	<a href="https://kennylou92.github.io/tos_story/10774.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10774.jpg" alt="變量釋義 ‧ 莫里亞蒂">變量釋義 ‧ 莫里亞蒂</a>
+	<a href="https://kennylou92.github.io/tos_story/10775.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10775.jpg" alt="心理觀測 ‧ 克拉克">心理觀測 ‧ 克拉克</a>
+	<a href="https://kennylou92.github.io/tos_story/10776.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10776.jpg" alt="鋒迴偵查 ‧ 考克斯">鋒迴偵查 ‧ 考克斯</a>
+		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+
+</body>
+</html>
