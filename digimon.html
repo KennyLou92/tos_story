@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>數碼暴龍</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+
+        .button-container a img { <!--換圖 ，CSS在hoverEffect.js-->
+            transition: 0.3s;
+        }
+
+.sidebar a {
+	display: flex;  /* 讓圖片與文字並排 */
+	align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-size: 18px; /* 🔹 可以調整字體大小 */
+}
+
+.sidebar a img {
+	margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+    <!-- <h1>通行證</h1> -->
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <div class="sidebar" id = "sidebar">
+	<a href="https://kennylou92.github.io/tos_story/crossover.html">🏠 回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src="https://i.postimg.cc/H8XgVKbB/20001-S.png" alt="以諾時代">以諾時代</a>
+	<a href="https://kennylou92.github.io/tos_story/newera.html"><img src="https://i.postimg.cc/K1JyktgS/20003-S.png"  alt="嶄新時代">嶄新時代</a>
+    <a href="https://kennylou92.github.io/tos_story/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="獨立卡匣">獨立卡匣</a>
+	<a href="https://kennylou92.github.io/tos_story/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="通行證">合作</a>
+	<a href="https://kennylou92.github.io/tos_story/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="通行證">通行證</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story/10244.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10244.jpg" alt="石田大和與加布獸">石田大和與加布獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10245.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10245.jpg" alt="八神太一與亞古獸">八神太一與亞古獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10246.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10246.jpg" alt="太刀川美美與巴魯獸">太刀川美美與巴魯獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10247.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10247.jpg" alt="高石武與巴達獸與八神嘉兒與迪路獸">高石武與巴達獸與八神嘉兒與迪路獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10248.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10248.jpg" alt="泉光子郎與甲蟲獸">泉光子郎與甲蟲獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10249.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10249.jpg" alt="城戶丈與哥瑪獸">城戶丈與哥瑪獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10250.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10250.jpg" alt="武之內素娜與比丘獸">武之內素娜與比丘獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10251.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10251.jpg" alt="獅子獸">獅子獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10252.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10252.jpg" alt="惡魔獸">惡魔獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10253.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10253.jpg" alt="奧加獸">奧加獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10254.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10254.jpg" alt="淑女惡魔獸">淑女惡魔獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10255.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10255.jpg" alt="究極吸血魔獸">究極吸血魔獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10256.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10256.jpg" alt="鋼鐵海龍獸">鋼鐵海龍獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10257.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10257.jpg" alt="木偶獸">木偶獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10258.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10258.jpg" alt="機械邪龍獸">機械邪龍獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10259.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10259.jpg" alt="小丑皇">小丑皇</a>
+	<a href="https://kennylou92.github.io/tos_story/10260.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10260.jpg" alt="啟示錄獸">啟示錄獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10261.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10261.jpg" alt="超惡魔獸">超惡魔獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10262.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10262.jpg" alt="V仔獸與蟲蟲獸">V仔獸與蟲蟲獸</a>
+	<a href="https://kennylou92.github.io/tos_story/10263.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10263.jpg" alt="鼻涕獸與大便獸與芝蒙獸">鼻涕獸與大便獸與芝蒙獸</a>
+<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+	
+	<script src="https://kennylou92.github.io/tos_story/hoverEffect.js"></script>
+</body>
+</html>
