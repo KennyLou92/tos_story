@@ -675,9 +675,11 @@
 	<a href="https://kennylou92.github.io/tos_story/10881.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10881.jpg" alt="狂熱圓舞曲 ‧ 李斯特">狂熱圓舞曲 ‧ 李斯特</a>
 	<a href="https://kennylou92.github.io/tos_story/10882.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10882.jpg" alt="和諧離別曲 ‧ 蕭邦">和諧離別曲 ‧ 蕭邦</a>
 	<a href="https://kennylou92.github.io/tos_story/10883.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10883.jpg" alt="惡魔詠歎調 ‧ 帕格尼尼">惡魔詠歎調 ‧ 帕格尼尼</a>
+	<a href="https://kennylou92.github.io/tos_story/10884.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10884.jpg" alt="10884" onerror = "this.onerror=null; this.src='https://kennylou92.github.io/tos_story/Img/default.png';">10884</a>
 	<a href="https://kennylou92.github.io/tos_story/10885.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10885.jpg" alt="幸福進行曲 ‧ 孟德爾頌">幸福進行曲 ‧ 孟德爾頌</a>
 	<a href="https://kennylou92.github.io/tos_story/10886.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10886.jpg" alt="潛幕謀局 ‧ 雷蒙德">潛幕謀局 ‧ 雷蒙德</a>
 	<a href="https://kennylou92.github.io/tos_story/10887.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10887.jpg" alt="正道鐵律 ‧ 蓋倫">正道鐵律 ‧ 蓋倫</a>
+	<a href="https://kennylou92.github.io/tos_story/10888.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10888.jpg" alt="10886" onerror = "this.onerror=null; this.src='https://kennylou92.github.io/tos_story/Img/default.png';">10888</a>
 	<a href="https://kennylou92.github.io/tos_story/10891.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10891.jpg" alt="天道震鳴 ‧ 刻琿">天道震鳴 ‧ 刻琿</a>
 	<a href="https://kennylou92.github.io/tos_story/10892.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/10892.jpg" alt="皓耀珀火 ‧ 刻琿">皓耀珀火 ‧ 刻琿</a>
 		<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
@@ -703,7 +705,26 @@
                 sidebar.classList.remove("active");
             }
         });
+		 // 👉 新增：檢查連結是否為 404
+    const links = document.querySelectorAll('.button-container a');
+    links.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const url = this.href;
+
+            fetch(url, { method: 'HEAD' }).then(response => {
+                if (response.status === 404) {
+                    alert('此網址暫未公開，請稍後再試。');
+                } else {
+                    window.location.href = url;
+                }
+            }).catch(err => {
+                alert('無法連線，請稍後再試。');
+                console.error('連線錯誤:', err);
+            });
+        });
     });
+});
 	</script>
 
 </body>
