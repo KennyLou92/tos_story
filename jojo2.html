@@ -105,7 +105,26 @@
                 sidebar.classList.remove("active");
             }
         });
+		// 👉 新增：檢查連結是否為 404
+	const links = document.querySelectorAll('.button-container a');
+    links.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            const url = this.href;
+
+            fetch(url, { method: 'HEAD' }).then(response => {
+                if (response.status === 404) {
+                    alert('此網址暫未公開，請稍後再試。');
+                } else {
+                    window.location.href = url;
+                }
+            }).catch(err => {
+                alert('無法連線，請稍後再試。');
+                console.error('連線錯誤:', err);
+            });
+        });
     });
+});
 	</script>
 	
 	<script src="https://kennylou92.github.io/tos_story/hoverEffect.js"></script>
