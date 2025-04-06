@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大和</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+
+        .button-container a img { <!--換圖 ，CSS在hoverEffect.js-->
+            transition: 0.3s;
+        }
+
+.sidebar a {
+	display: flex;  /* 讓圖片與文字並排 */
+	align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-size: 18px; /* 🔹 可以調整字體大小 */
+}
+
+.sidebar a img {
+	margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+    <!-- <h1>通行證</h1> -->
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <div class="sidebar" id = "sidebar">
+	<a href="https://kennylou92.github.io/tos_story/standalone.html">🏠 回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src="https://i.postimg.cc/H8XgVKbB/20001-S.png" alt="以諾時代">以諾時代</a>
+	<a href="https://kennylou92.github.io/tos_story/newera.html"><img src="https://i.postimg.cc/K1JyktgS/20003-S.png"  alt="嶄新時代">嶄新時代</a>
+    <a href="https://kennylou92.github.io/tos_story/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="獨立卡匣">獨立卡匣</a>
+	<a href="https://kennylou92.github.io/tos_story/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="通行證">合作</a>
+	<a href="https://kennylou92.github.io/tos_story/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="通行證">通行證</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story/1416.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1416.jpg" alt="須佐之男">須佐之男</a>
+	<a href="https://kennylou92.github.io/tos_story/1417.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1417.jpg" alt="滄海浪子 ‧ 須佐之男">滄海浪子 ‧ 須佐之男</a>
+	<a href="https://kennylou92.github.io/tos_story/1418.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1418.jpg" alt="迦具土">迦具土</a>
+	<a href="https://kennylou92.github.io/tos_story/1419.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1419.jpg" alt="火靈邪印 ‧ 迦具土">火靈邪印 ‧ 迦具土</a>
+	<a href="https://kennylou92.github.io/tos_story/1420.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1420.jpg" alt="稻荷">稻荷</a>
+	<a href="https://kennylou92.github.io/tos_story/1421.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1421.jpg" alt="百狐變 ‧ 稻荷">百狐變 ‧ 稻荷</a>
+	<a href="https://kennylou92.github.io/tos_story/1422.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1422.jpg" alt="櫛名田">櫛名田</a>
+	<a href="https://kennylou92.github.io/tos_story/1423.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1423.jpg" alt="出雲之女 ‧ 櫛名田比賣">出雲之女 ‧ 櫛名田比賣</a>
+	<a href="https://kennylou92.github.io/tos_story/1424.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1424.jpg" alt="伊邪那美">伊邪那美</a>
+	<a href="https://kennylou92.github.io/tos_story/1425.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1425.jpg" alt="古怨經 ‧ 伊邪那美">古怨經 ‧ 伊邪那美</a>
+	<a href="https://kennylou92.github.io/tos_story/1426.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1426.jpg" alt="天照">天照</a>
+	<a href="https://kennylou92.github.io/tos_story/1427.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1427.jpg" alt="日向高天 ‧ 天照">日向高天 ‧ 天照</a>
+	<a href="https://kennylou92.github.io/tos_story/1428.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1428.jpg" alt="伊邪那岐">伊邪那岐</a>
+	<a href="https://kennylou92.github.io/tos_story/1429.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1429.jpg" alt="瓊珠之咒 ‧ 伊邪那岐">瓊珠之咒 ‧ 伊邪那岐</a>
+	<a href="https://kennylou92.github.io/tos_story/1430.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1430.jpg" alt="月讀">月讀</a>
+	<a href="https://kennylou92.github.io/tos_story/1431.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1431.jpg" alt="星夜線偶 ‧ 月讀">星夜線偶 ‧ 月讀</a>
+	<a href="https://kennylou92.github.io/tos_story/1434.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1434.jpg" alt="一扇月 ‧ 輝夜姬">一扇月 ‧ 輝夜姬</a>
+	<a href="https://kennylou92.github.io/tos_story/1435.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1435.jpg" alt="金糧神 ‧ 大黑天">金糧神 ‧ 大黑天</a>
+	<a href="https://kennylou92.github.io/tos_story/1437.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1437.jpg" alt="護生明君 ‧ 大國主">護生明君 ‧ 大國主</a>
+	<a href="https://kennylou92.github.io/tos_story/2481.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2481.jpg" alt="雲劍斬禍 ‧ 須佐之男">雲劍斬禍 ‧ 須佐之男</a>
+	<a href="https://kennylou92.github.io/tos_story/2482.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2482.jpg" alt="熔斷綑鎖 ‧ 迦具土">熔斷綑鎖 ‧ 迦具土</a>
+	<a href="https://kennylou92.github.io/tos_story/2483.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2483.jpg" alt="千變靈狐 ‧ 稻荷">千變靈狐 ‧ 稻荷</a>
+	<a href="https://kennylou92.github.io/tos_story/2484.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2484.jpg" alt="愛御神樂 ‧ 櫛名田比賣">愛御神樂 ‧ 櫛名田比賣</a>
+	<a href="https://kennylou92.github.io/tos_story/2485.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2485.jpg" alt="寄宿墮化 ‧ 伊邪那美">寄宿墮化 ‧ 伊邪那美</a>
+	<a href="https://kennylou92.github.io/tos_story/2486.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2486.jpg" alt="馨陽晴爽 ‧ 天照">馨陽晴爽 ‧ 天照</a>
+	<a href="https://kennylou92.github.io/tos_story/2487.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2487.jpg" alt="顧眄相伴 ‧ 伊邪那岐">顧眄相伴 ‧ 伊邪那岐</a>
+	<a href="https://kennylou92.github.io/tos_story/2488.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2488.jpg" alt="寂寥偶戲 ‧ 月讀">寂寥偶戲 ‧ 月讀</a>
+<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+	
+	<script src="https://kennylou92.github.io/tos_story/hoverEffect.js"></script>
+</body>
+</html>
