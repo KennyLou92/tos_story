@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宇宙序章</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+
+        .button-container a img { <!--換圖 ，CSS在hoverEffect.js-->
+            transition: 0.3s;
+        }
+
+.sidebar a {
+	display: flex;  /* 讓圖片與文字並排 */
+	align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-size: 18px; /* 🔹 可以調整字體大小 */
+}
+
+.sidebar a img {
+	margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+}	
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+    <!-- <h1>通行證</h1> -->
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <div class="sidebar" id = "sidebar">
+    <a href="https://kennylou92.github.io/tos_story/crossover.html">🏠 回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src="https://i.postimg.cc/H8XgVKbB/20001-S.png" alt="以諾時代">以諾時代</a>
+	<a href="https://kennylou92.github.io/tos_story/newera.html"><img src="https://i.postimg.cc/K1JyktgS/20003-S.png"  alt="嶄新時代">嶄新時代</a>
+    <a href="https://kennylou92.github.io/tos_story/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="獨立卡匣">獨立卡匣</a>
+	<a href="https://kennylou92.github.io/tos_story/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="通行證">合作</a>
+	<a href="https://kennylou92.github.io/tos_story/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="通行證">通行證</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story/1636.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1636.jpg" alt="烏波 ‧ 薩斯拉">烏波 ‧ 薩斯拉</a>
+	<a href="https://kennylou92.github.io/tos_story/1637.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1637.jpg" alt="自生之源 ‧ 烏波">自生之源 ‧ 烏波</a>
+	<a href="https://kennylou92.github.io/tos_story/1638.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1638.jpg" alt="格赫羅斯">格赫羅斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1639.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1639.jpg" alt="瘋癲夢界度 ‧ 格赫羅斯">瘋癲夢界度 ‧ 格赫羅斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1640.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1640.jpg" alt="伊波 ‧ 茲特爾">伊波 ‧ 茲特爾</a>
+	<a href="https://kennylou92.github.io/tos_story/1641.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1641.jpg" alt="邪惡源核 ‧ 伊波">邪惡源核 ‧ 伊波</a>
+	<a href="https://kennylou92.github.io/tos_story/1642.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1642.jpg" alt="道羅斯">道羅斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1643.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1643.jpg" alt="悖論創造 ‧ 道羅斯">悖論創造 ‧ 道羅斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1644.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1644.jpg" alt="阿撒托斯">阿撒托斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1645.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1645.jpg" alt="因果破壞 ‧ 阿撒托斯">因果破壞 ‧ 阿撒托斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1646.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1646.jpg" alt="阿布霍斯">阿布霍斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1647.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1647.jpg" alt="救贖思考 ‧ 阿布霍斯">救贖思考 ‧ 阿布霍斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1648.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1648.jpg" alt="加塔諾托亞">加塔諾托亞</a>
+	<a href="https://kennylou92.github.io/tos_story/1649.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1649.jpg" alt="原初潔淨 ‧ 加塔諾托亞">原初潔淨 ‧ 加塔諾托亞</a>
+	<a href="https://kennylou92.github.io/tos_story/1650.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1650.jpg" alt="阿特拉克 ‧ 納克亞">阿特拉克 ‧ 納克亞</a>
+	<a href="https://kennylou92.github.io/tos_story/1651.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1651.jpg" alt="灰暗擴散 ‧ 阿特拉克">灰暗擴散 ‧ 阿特拉克</a>
+	<a href="https://kennylou92.github.io/tos_story/1652.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1652.jpg" alt="存留的火舌 ‧ 弗塔古亞">存留的火舌 ‧ 弗塔古亞</a>
+	<a href="https://kennylou92.github.io/tos_story/1653.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1653.jpg" alt="容納侵蝕 ‧ 阿爾瓦撒">容納侵蝕 ‧ 阿爾瓦撒</a>
+	<a href="https://kennylou92.github.io/tos_story/1654.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1654.jpg" alt="敗德的散播 ‧ 伊戈隆納克">敗德的散播 ‧ 伊戈隆納克</a>
+	<a href="https://kennylou92.github.io/tos_story/1655.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1655.jpg" alt="統覺進化 ‧ 莫爾迪基安">統覺進化 ‧ 莫爾迪基安</a>
+	<a href="https://kennylou92.github.io/tos_story/1656.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1656.jpg" alt="元素連結 ‧ 塔維爾">元素連結 ‧ 塔維爾</a>
+	<a href="https://kennylou92.github.io/tos_story/1657.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1657.jpg" alt="世界線的觀測者 ‧ 伊塔庫亞">世界線的觀測者 ‧ 伊塔庫亞</a>
+	<a href="https://kennylou92.github.io/tos_story/2838.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2838.jpg" alt="信仰囚徒 ‧ 烏波">信仰囚徒 ‧ 烏波</a>
+	<a href="https://kennylou92.github.io/tos_story/2839.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2839.jpg" alt="統治潛意識 ‧ 格赫羅斯">統治潛意識 ‧ 格赫羅斯</a>
+	<a href="https://kennylou92.github.io/tos_story/2840.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2840.jpg" alt="腐朽斥逐 ‧ 伊波">腐朽斥逐 ‧ 伊波</a>
+	<a href="https://kennylou92.github.io/tos_story/2841.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2841.jpg" alt="概念衍生 ‧ 道羅斯">概念衍生 ‧ 道羅斯</a>
+	<a href="https://kennylou92.github.io/tos_story/2842.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2842.jpg" alt="邏輯瓦解 ‧ 阿撒托斯">邏輯瓦解 ‧ 阿撒托斯</a>
+	<a href="https://kennylou92.github.io/tos_story/2843.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2843.jpg" alt="邁向永劫 ‧ 阿布霍斯">邁向永劫 ‧ 阿布霍斯</a>
+	<a href="https://kennylou92.github.io/tos_story/2844.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2844.jpg" alt="紡織絕望 ‧ 加塔諾托亞">紡織絕望 ‧ 加塔諾托亞</a>
+	<a href="https://kennylou92.github.io/tos_story/2845.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2845.jpg" alt="缺憾桎梏 ‧ 阿特拉克">缺憾桎梏 ‧ 阿特拉克</a>
+<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+	
+	<script src="https://kennylou92.github.io/tos_story/hoverEffect.js"></script>
+</body>
+</html>
