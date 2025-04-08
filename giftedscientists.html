@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科研敍論</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+.sidebar a {
+	display: flex;  /* 讓圖片與文字並排 */
+	align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-size: 18px; /* 🔹 可以調整字體大小 */
+}
+
+.sidebar a img {
+	margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+	<div class="sidebar" id = "sidebar">
+	<a href="https://kennylou92.github.io/tos_story/standalone.html">🏠<br>回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src="https://i.postimg.cc/H8XgVKbB/20001-S.png" alt="以諾時代">以諾時代</a>
+	<a href="https://kennylou92.github.io/tos_story/newera.html"><img src="https://i.postimg.cc/K1JyktgS/20003-S.png"  alt="嶄新時代">嶄新時代</a>
+    <a href="https://kennylou92.github.io/tos_story/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="獨立卡匣">獨立卡匣</a>
+	<a href="https://kennylou92.github.io/tos_story/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="通行證">合作</a>
+	<a href="https://kennylou92.github.io/tos_story/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="通行證">通行證</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story/2006.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2006.jpg" alt="愛因斯坦">愛因斯坦</a>
+	<a href="https://kennylou92.github.io/tos_story/2007.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2007.jpg" alt="時空相對論 ‧ 愛因斯坦">時空相對論 ‧ 愛因斯坦</a>
+	<a href="https://kennylou92.github.io/tos_story/2008.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2008.jpg" alt="牛頓">牛頓</a>
+	<a href="https://kennylou92.github.io/tos_story/2009.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2009.jpg" alt="自然律變奏 ‧ 牛頓">自然律變奏 ‧ 牛頓</a>
+	<a href="https://kennylou92.github.io/tos_story/2010.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2010.jpg" alt="達爾文">達爾文</a>
+	<a href="https://kennylou92.github.io/tos_story/2011.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2011.jpg" alt="生物多樣性 ‧ 達爾文">生物多樣性 ‧ 達爾文</a>
+	<a href="https://kennylou92.github.io/tos_story/2012.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2012.jpg" alt="愛迪生">愛迪生</a>
+	<a href="https://kennylou92.github.io/tos_story/2013.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2013.jpg" alt="無界限發明 ‧ 愛迪生">無界限發明 ‧ 愛迪生</a>
+	<a href="https://kennylou92.github.io/tos_story/2014.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2014.jpg" alt="伽利略">伽利略</a>
+	<a href="https://kennylou92.github.io/tos_story/2015.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2015.jpg" alt="超新星序曲 ‧ 伽利略">超新星序曲 ‧ 伽利略</a>
+	<a href="https://kennylou92.github.io/tos_story/2016.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2016.jpg" alt="瑪麗居禮">瑪麗居禮</a>
+	<a href="https://kennylou92.github.io/tos_story/2017.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2017.jpg" alt="同位素放射 ‧ 瑪麗居禮">同位素放射 ‧ 瑪麗居禮</a>
+	<a href="https://kennylou92.github.io/tos_story/2018.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2018.jpg" alt="蘇格拉底">蘇格拉底</a>
+	<a href="https://kennylou92.github.io/tos_story/2019.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2019.jpg" alt="道德反詰法 ‧ 蘇格拉底">道德反詰法 ‧ 蘇格拉底</a>
+	<a href="https://kennylou92.github.io/tos_story/2020.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2020.jpg" alt="妮可">妮可</a>
+	<a href="https://kennylou92.github.io/tos_story/2021.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2021.jpg" alt="歸回星哈雷 ‧ 妮可">歸回星哈雷 ‧ 妮可</a>
+	<a href="https://kennylou92.github.io/tos_story/2022.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2022.jpg" alt="理想世界 ‧ 柏拉圖">理想世界 ‧ 柏拉圖</a>
+	<a href="https://kennylou92.github.io/tos_story/2023.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2023.jpg" alt="引力牽繫 ‧ 哥白尼">引力牽繫 ‧ 哥白尼</a>
+	<a href="https://kennylou92.github.io/tos_story/2024.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2024.jpg" alt="乙太紛裂 ‧ 亞里士多德">乙太紛裂 ‧ 亞里士多德</a>
+	<a href="https://kennylou92.github.io/tos_story/2025.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2025.jpg" alt="新大陸展航 ‧ 哥倫布">新大陸展航 ‧ 哥倫布</a>
+	<a href="https://kennylou92.github.io/tos_story/2026.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2026.jpg" alt="最後的審判 ‧ 米開朗基羅">最後的審判 ‧ 米開朗基羅</a>
+	<a href="https://kennylou92.github.io/tos_story/2027.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2027.jpg" alt="可塑性生命 · 薛丁格">可塑性生命 · 薛丁格</a>
+	<a href="https://kennylou92.github.io/tos_story/2028.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2028.jpg" alt="鍊合化光 · 佩脫拉">鍊合化光 · 佩脫拉</a>
+	<a href="https://kennylou92.github.io/tos_story/2029.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2029.jpg" alt="神聖比例 · 達文西">神聖比例 · 達文西</a>
+	<a href="https://kennylou92.github.io/tos_story/2030.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2030.jpg" alt="我思故我在 ‧ 笛卡兒">我思故我在 ‧ 笛卡兒</a>
+	<a href="https://kennylou92.github.io/tos_story/2031.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2031.jpg" alt="經驗匯聚 ‧ 培根">經驗匯聚 ‧ 培根</a>
+	<a href="https://kennylou92.github.io/tos_story/2032.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2032.jpg" alt="定義質疑 ‧ 波以耳">定義質疑 ‧ 波以耳</a>
+<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+
+</body>
+</html>
