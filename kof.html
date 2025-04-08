@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>拳皇</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        .button-container {
+            display: flex;
+            flex-wrap: wrap; /* 讓按鈕自動換行 */
+            justify-content: center;
+            gap: 15px;
+            max-width: 600px; /* 控制最大寬度 */
+            margin: 20px auto;
+        }
+        .button-container a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none;
+            padding: 10px;
+            width: 80px;
+            background-color: #b1b1b1;
+            color: white;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+        .button-container a:hover {
+            background-color: #292828;
+        }
+        .button-container img {
+            width: 80px; /* 圖片大小 */
+            height: 80px;
+            margin-bottom: 5px;
+        }
+.sidebar a {
+	display: flex;  /* 讓圖片與文字並排 */
+	align-items: center;  /* 🔹 讓文字與圖片垂直置中 */
+	text-decoration: none;
+	color: black;
+	padding: 10px;
+	font-size: 18px; /* 🔹 可以調整字體大小 */
+}
+
+.sidebar a img {
+	margin-right: 10px;  /* 🔹 增加圖片與文字的間距 */
+	width: 50px;
+	height: 50px;
+	vertical-align: middle;  /* 🔹 確保圖片與文字在同一條基線 */
+}
+    </style>
+	<link rel="stylesheet" href="https://kennylou92.github.io/tos_story/style.css">
+</head>
+<body>
+    <!-- <h1>通行證</h1> -->
+	<button class="sidebar-toggle" onclick="toggleSidebar()">☰ 選單</button>
+    <div class="sidebar" id = "sidebar">
+    <a href="https://kennylou92.github.io/tos_story/crossover.html">🏠 回主頁</a>
+	<a href="https://kennylou92.github.io/tos_story/oldera.html"><img src="https://i.postimg.cc/H8XgVKbB/20001-S.png" alt="以諾時代">以諾時代</a>
+	<a href="https://kennylou92.github.io/tos_story/newera.html"><img src="https://i.postimg.cc/K1JyktgS/20003-S.png"  alt="嶄新時代">嶄新時代</a>
+    <<a href="https://kennylou92.github.io/tos_story/standalone.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0400.jpg" alt="獨立卡匣">獨立卡匣</a>
+	<a href="https://kennylou92.github.io/tos_story/crossover.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/0685.jpg" alt="通行證">合作</a>
+	<a href="https://kennylou92.github.io/tos_story/battlepass.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/2751.jpg"  alt="通行證">通行證</a>
+	</div>
+    <div class="button-container">
+	<a href="https://kennylou92.github.io/tos_story/1571.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1571.jpg" alt="龍拳少年 ‧ 椎拳崇">龍拳少年 ‧ 椎拳崇</a>
+	<a href="https://kennylou92.github.io/tos_story/1572.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1572.jpg" alt="烈陽赤炎 ‧ 草薙京">烈陽赤炎 ‧ 草薙京</a>
+	<a href="https://kennylou92.github.io/tos_story/1573.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1573.jpg" alt="熱血蹴拳王 ‧ 金家藩">熱血蹴拳王 ‧ 金家藩</a>
+	<a href="https://kennylou92.github.io/tos_story/1574.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1574.jpg" alt="雷光美獸 ‧ 二階堂紅丸">雷光美獸 ‧ 二階堂紅丸</a>
+	<a href="https://kennylou92.github.io/tos_story/1575.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1575.jpg" alt="紫藍之月 ‧ 八神庵">紫藍之月 ‧ 八神庵</a>
+	<a href="https://kennylou92.github.io/tos_story/1576.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1576.jpg" alt="忍術的傳承 ‧ 不知火舞">忍術的傳承 ‧ 不知火舞</a>
+	<a href="https://kennylou92.github.io/tos_story/1577.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1577.jpg" alt="餓狼狂嚎 ‧ 泰利波格">餓狼狂嚎 ‧ 泰利波格</a>
+	<a href="https://kennylou92.github.io/tos_story/1578.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1578.jpg" alt="超能女高中生 ‧ 麻宮雅典娜">超能女高中生 ‧ 麻宮雅典娜</a>
+	<a href="https://kennylou92.github.io/tos_story/1579.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1579.jpg" alt="萬物之念 ‧ 大蛇">萬物之念 ‧ 大蛇</a>
+	<a href="https://kennylou92.github.io/tos_story/1580.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1580.jpg" alt="虐殺交響曲 ‧ 路卡爾">虐殺交響曲 ‧ 路卡爾</a>
+	<a href="https://kennylou92.github.io/tos_story/1581.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1581.jpg" alt="八咫鏡之守護 ‧ 神樂千鶴">八咫鏡之守護 ‧ 神樂千鶴</a>
+	<a href="https://kennylou92.github.io/tos_story/1582.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1582.jpg" alt="閃靈狩獵 ‧ 克里斯">閃靈狩獵 ‧ 克里斯</a>
+	<a href="https://kennylou92.github.io/tos_story/1583.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1583.jpg" alt="終極衝殺 ‧ 七枷社">終極衝殺 ‧ 七枷社</a>
+	<a href="https://kennylou92.github.io/tos_story/1584.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1584.jpg" alt="重力旋投 ‧ 舍露美">重力旋投 ‧ 舍露美</a>
+	<a href="https://kennylou92.github.io/tos_story/1585.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1585.jpg" alt="軍武傭兵 ‧ 莉安娜">軍武傭兵 ‧ 莉安娜</a>
+	<a href="https://kennylou92.github.io/tos_story/1590.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/1590.jpg" alt="灼熱本能 ‧ K´">灼熱本能 ‧ K´</a>
+<!-- <a href="https://kennylou92.github.io/tos_story/.html"><img src="https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/.jpg" alt=""></a> -->
+        <!-- 只要繼續加這行，按鈕會自動換行 -->
+    </div>
+    <!-- JavaScript -->
+	<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var sidebar = document.getElementById("sidebar");
+        var toggleButton = document.querySelector(".sidebar-toggle");
+
+        toggleButton.addEventListener("click", function() {
+            if (sidebar.classList.contains("active")) {
+                sidebar.classList.remove("active"); // 隱藏
+            } else {
+                sidebar.classList.add("active"); // 顯示
+            }
+        });
+
+        // 點擊內容區域時，側邊欄自動收回
+        document.addEventListener("click", function(event) {
+            if (!sidebar.contains(event.target) && !toggleButton.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
+    });
+	</script>
+
+</body>
+</html>
