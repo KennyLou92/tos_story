@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>神魔故事</title>
+<style>
+:root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--sub:#6e6e73;--line:#e0e0e5;--accent:#3b6fd4}
+@media (prefers-color-scheme:dark){:root{--bg:#141416;--card:#212125;--text:#f2f2f4;--sub:#a0a0a8;--line:#33333a;--accent:#7aa2f7}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;line-height:1.6}
+header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+header h1{font-size:1.1rem;margin:0}
+header .count{color:var(--sub);font-size:.85rem}
+#q{flex:1;min-width:180px;max-width:360px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font-size:.95rem}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;padding:16px;max-width:1400px;margin:0 auto}
+.item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 6px;text-align:center;cursor:pointer;text-decoration:none;color:inherit;display:block}
+.item:hover{border-color:var(--accent)}
+.item img{width:72px;height:72px;border-radius:8px;object-fit:cover;background:var(--line);display:block;margin:0 auto 4px}
+.item .id{font-size:.72rem;color:var(--sub)}
+.item .nm{font-size:.82rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+#more{display:block;margin:8px auto 32px;padding:10px 24px;border:1px solid var(--line);background:var(--card);color:var(--text);border-radius:8px;cursor:pointer}
+#detail{max-width:760px;margin:0 auto;padding:16px 16px 48px}
+.nav{display:flex;justify-content:space-between;gap:8px;margin-bottom:16px}
+.nav a{color:var(--accent);text-decoration:none;font-size:.95rem}
+.hd{display:flex;gap:16px;align-items:center;margin-bottom:16px}
+.hd img{width:96px;height:96px;border-radius:12px;background:var(--line)}
+.hd h2{margin:0;font-size:1.4rem}
+.hd .sid{color:var(--sub);font-size:.85rem}
+.story{position:relative;overflow:hidden;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px;font-size:1rem;line-height:1.9}
+.story .bg{position:absolute;inset:0;z-index:0;pointer-events:none}
+.story .bg img{width:100%;height:100%;object-fit:cover;object-position:center top;opacity:.5;display:block}
+.story .txt{position:relative;z-index:1;white-space:pre-wrap;word-break:break-word;text-shadow:0 0 3px var(--card),0 0 6px var(--card)}
+.empty{padding:40px;text-align:center;color:var(--sub)}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header>
+  <h1 id="title"><a href="#" style="color:inherit;text-decoration:none">神魔故事</a></h1>
+  <input id="q" type="search" placeholder="搜尋名稱或編號…" autocomplete="off">
+  <span class="count" id="count"></span>
+</header>
+<div id="loader" class="empty"><p id="loadmsg">載入中…</p></div>
+<main id="home">
+  <div id="grid"></div>
+  <button id="more" hidden>載入更多</button>
+</main>
+<main id="detail" hidden></main>
+<script>
+const STORY_URL="story_zh.json", MONSTER_URL="monster_zh.json";
+let STORIES={}, NAMES={}, IDS=[];
+const card_=id=>"https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/cards/"+String(id).padStart(4,"0")+".jpg";
+const icon=id=>"https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/"+String(id).padStart(4,"0")+".jpg";
+const stripTags=s=>String(s).replace(/\[\/?(?:b|i|u|s|color(?:=[^\]]*)?)\]|<\/?(?:b|i|u|s|br|color(?:=[^>]*)?)\s*\/?>/gi,"");
+const nameOf=id=>NAMES[id]?stripTags(NAMES[id]):("#"+id);
+// 安全格式化：先全部轉義，再只還原白名單標籤（[b][i][u][s][color=x]、<b><i><u><s><br><color=x>）
+function fmt(raw){
+  let h=String(raw).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  const col=c=>{c=c.trim().replace(/^["']|["']$/g,"");return /^#?[0-9a-z]{3,20}$/i.test(c)?c:null};
+  const open=(tag,arg)=>{
+    if(tag==="color"){const c=col(arg||"");return c?'<span style="color:'+(/^[0-9a-f]{6}$/i.test(c)?"#"+c:c)+'">':"<span>"}
+    return "<"+tag+">";
+  };
+  const close=tag=>tag==="color"?"</span>":"</"+tag+">";
+  h=h.replace(/\[(b|i|u|s|color)(?:=([^\]]*))?\]/gi,(m,t,a)=>open(t.toLowerCase(),a))
+     .replace(/\[\/(b|i|u|s|color)\]/gi,(m,t)=>close(t.toLowerCase()))
+     .replace(/&lt;(b|i|u|s|color)(?:=([^&]*?))?&gt;/gi,(m,t,a)=>open(t.toLowerCase(),a))
+     .replace(/&lt;\/(b|i|u|s|color)&gt;/gi,(m,t)=>close(t.toLowerCase()))
+     .replace(/&lt;br\s*\/?&gt;/gi,"<br>");
+  return h;
+}
+const $=s=>document.querySelector(s);
+const PAGE=300;
+let list=[], shown=0;
+
+function card(id){
+  const a=document.createElement("a");
+  a.className="item";a.href="#"+id;
+  const img=document.createElement("img");
+  img.loading="lazy";img.alt=nameOf(id);img.src=icon(id);
+  img.onerror=()=>{img.style.visibility="hidden"};
+  const i=document.createElement("div");i.className="id";i.textContent="No."+id;
+  const n=document.createElement("div");n.className="nm";n.textContent=nameOf(id);n.title=nameOf(id);
+  a.append(img,i,n);return a;
+}
+function renderMore(){
+  const frag=document.createDocumentFragment();
+  list.slice(shown,shown+PAGE).forEach(id=>frag.append(card(id)));
+  $("#grid").append(frag);
+  shown=Math.min(shown+PAGE,list.length);
+  $("#more").hidden=shown>=list.length;
+}
+function applyFilter(){
+  const k=$("#q").value.trim().toLowerCase();
+  list=k?IDS.filter(id=>String(id)===k||String(id).startsWith(k)||nameOf(id).toLowerCase().includes(k)):IDS;
+  $("#grid").replaceChildren();shown=0;renderMore();
+  $("#count").textContent=list.length+" / "+IDS.length;
+  if(!list.length)$("#grid").innerHTML='<div class="empty">找不到結果</div>';
+}
+function showDetail(id){
+  const i=IDS.indexOf(id);
+  const prev=IDS[i-1],next=IDS[i+1];
+  const d=$("#detail");d.replaceChildren();
+  const nav=document.createElement("div");nav.className="nav";
+  nav.innerHTML='<a href="#">← 返回列表</a>';
+  const r=document.createElement("span");
+  if(prev!=null)r.innerHTML+='<a href="#'+prev+'">‹ '+nameOf(prev).replace(/</g,"&lt;")+'</a>　';
+  if(next!=null)r.innerHTML+='<a href="#'+next+'">'+nameOf(next).replace(/</g,"&lt;")+' ›</a>';
+  nav.append(r);
+  const hd=document.createElement("div");hd.className="hd";
+  const img=document.createElement("img");img.src=icon(id);img.alt=nameOf(id);img.onerror=()=>{img.style.visibility="hidden"};
+  const box=document.createElement("div");
+  const h=document.createElement("h2");h.textContent=nameOf(id);
+  const s=document.createElement("div");s.className="sid";s.textContent="MONSTER_"+id+" ／ STORY_"+id;
+  box.append(h,s);hd.append(img,box);
+  const st=document.createElement("div");st.className="story";const bg=document.createElement("div");bg.className="bg";
+  const bi=document.createElement("img");bi.src=card_(id);bi.alt="";bi.onerror=()=>bg.remove();bg.append(bi);
+  const tx=document.createElement("div");tx.className="txt";tx.innerHTML=fmt(STORIES[id]);
+  st.append(bg,tx);
+  d.append(nav,hd,st);
+  document.title=nameOf(id)+" - 神魔故事";
+}
+function route(){
+  const h=location.hash.slice(1);
+  const id=/^\d+$/.test(h)?Number(h):null;
+  if(id!=null&&STORIES[id]!=null){
+    $("#home").hidden=true;$("#detail").hidden=false;$(".count").hidden=true;$("#q").hidden=true;
+    showDetail(id);window.scrollTo(0,0);
+  }else{
+    $("#home").hidden=false;$("#detail").hidden=true;$(".count").hidden=false;$("#q").hidden=false;
+    document.title="神魔故事";
+  }
+}
+$("#more").onclick=renderMore;
+$("#q").addEventListener("input",applyFilter);
+addEventListener("hashchange",()=>{if(IDS.length)route()});
+
+// ---- 從 JSON 載入資料 ----
+function loadData(story,monster){
+  STORIES={};NAMES={};
+  for(const k in story){
+    const m=/^STORY_(\d+)$/.exec(k);
+    if(m&&typeof story[k]==="string"&&story[k].trim())STORIES[m[1]]=story[k];
+  }
+  for(const id in STORIES){
+    const v=monster["MONSTER_"+id];
+    if(typeof v==="string")NAMES[id]=v;
+  }
+  IDS=Object.keys(STORIES).map(Number).sort((a,b)=>a-b);
+  list=IDS;
+  $("#loader").hidden=true;
+  applyFilter();route();
+}
+async function fetchJson(u){
+  const r=await fetch(u);
+  if(!r.ok)throw new Error(u+" "+r.status);
+  return r.json();
+}
+(async()=>{
+  try{
+    const [s,m]=await Promise.all([fetchJson(STORY_URL),fetchJson(MONSTER_URL)]);
+    loadData(s,m);
+  }catch(e){
+    $("#loadmsg").textContent="無法讀取 "+STORY_URL+" / "+MONSTER_URL+"："+e.message+"。請確認兩個 JSON 與本檔放在同一位置，並透過網頁伺服器（http）開啟。";
+  }
+})();
+</script>
+</body>
+</html>
