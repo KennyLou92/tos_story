@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>神魔故事</title>
+<title>怪物故事圖鑑</title>
 <style>
 :root{--bg:#f5f5f7;--card:#fff;--text:#1d1d1f;--sub:#6e6e73;--line:#e0e0e5;--accent:#3b6fd4}
 @media (prefers-color-scheme:dark){:root{--bg:#141416;--card:#212125;--text:#f2f2f4;--sub:#a0a0a8;--line:#33333a;--accent:#7aa2f7}}
@@ -12,13 +12,14 @@ body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,"Noto
 header{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);padding:12px 16px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
 header h1{font-size:1.1rem;margin:0}
 header .count{color:var(--sub);font-size:.85rem}
+#lang{padding:8px 10px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font-size:.95rem;margin-left:auto}
 #q{flex:1;min-width:180px;max-width:360px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--text);font-size:.95rem}
-#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(96px,1fr));gap:10px;padding:16px;max-width:1400px;margin:0 auto}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:10px;padding:16px;max-width:1400px;margin:0 auto}
 .item{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 6px;text-align:center;cursor:pointer;text-decoration:none;color:inherit;display:block}
 .item:hover{border-color:var(--accent)}
 .item img{width:72px;height:72px;border-radius:8px;object-fit:cover;background:var(--line);display:block;margin:0 auto 4px}
 .item .id{font-size:.72rem;color:var(--sub)}
-.item .nm{font-size:.82rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.item .nm{font-size:.82rem;line-height:1.3;white-space:normal;word-break:break-word;overflow-wrap:anywhere}
 #detail{max-width:760px;margin:0 auto;padding:16px 16px 48px}
 .nav{display:flex;justify-content:space-between;gap:8px;margin-bottom:16px}
 .nav.bottom{margin:16px 0 0}
@@ -34,18 +35,28 @@ header .count{color:var(--sub);font-size:.85rem}
 </head>
 <body>
 <header>
-  <h1 id="title"><a href="#" style="color:inherit;text-decoration:none">神魔故事</a></h1>
-  <input id="q" type="search" placeholder="搜尋名稱或編號…" autocomplete="off">
+  <h1><a id="title" href="#" style="color:inherit;text-decoration:none">怪物故事圖鑑</a></h1>
+  <input id="q" type="search" autocomplete="off">
   <span class="count" id="count"></span>
+  <select id="lang" aria-label="Language"><option value="zh">中文</option><option value="en">English</option></select>
 </header>
-<div id="loader" class="empty"><p id="loadmsg">載入中…</p></div>
+<div id="loader" class="empty"><p id="loadmsg"></p></div>
 <main id="home">
   <div id="grid"></div>
 </main>
 <main id="detail" hidden></main>
 <script>
-const STORY_URL="story_zh.json", MONSTER_URL="monster_zh.json";
-let STORIES={}, NAMES={}, IDS=[];
+// 語言設定：檔名可在此修改
+const LANGS={
+  zh:{story:"story_zh.json",monster:"monster_zh.json",html:"zh-Hant",
+      title:"怪物故事圖鑑",search:"搜尋名稱或編號…",back:"← 返回列表",loading:"載入中…",
+      none:"找不到結果",fail:"無法讀取",hint:"請確認 JSON 檔與本檔放在同一位置，並透過網頁伺服器（http）開啟。"},
+  en:{story:"story_en.json",monster:"monster_en.json",html:"en",
+      title:"Monster Stories",search:"Search name or number…",back:"← Back to list",loading:"Loading…",
+      none:"No results",fail:"Failed to load",hint:"Make sure the JSON files are next to this page and it is opened through a web server (http)."}
+};
+let LANG="zh", STORIES={}, NAMES={}, IDS=[];
+const DATA={};  // 已載入的語言快取
 const icon=id=>"https://d1h5mn9kk900cf.cloudfront.net/toswebsites/gallery/icons/"+String(id).padStart(4,"0")+".jpg";
 const stripTags=s=>String(s).replace(/\[\/?(?:b|i|u|s|color(?:=[^\]]*)?)\]|<\/?(?:b|i|u|s|br|color(?:=[^>]*)?)\s*\/?>/gi,"");
 const nameOf=id=>NAMES[id]?stripTags(NAMES[id]):("#"+id);
@@ -66,6 +77,7 @@ function fmt(raw){
   return h;
 }
 const $=s=>document.querySelector(s);
+const T=k=>LANGS[LANG][k];
 let list=[], savedY=0;
 
 function card(id){
@@ -75,7 +87,7 @@ function card(id){
   img.loading="lazy";img.alt=nameOf(id);img.src=icon(id);
   img.onerror=()=>{img.style.visibility="hidden"};
   const i=document.createElement("div");i.className="id";i.textContent="No."+id;
-  const n=document.createElement("div");n.className="nm";n.textContent=nameOf(id);n.title=nameOf(id);
+  const n=document.createElement("div");n.className="nm";n.textContent=nameOf(id);
   a.append(img,i,n);return a;
 }
 function applyFilter(){
@@ -85,14 +97,14 @@ function applyFilter(){
   list.forEach(id=>frag.append(card(id)));
   $("#grid").replaceChildren(frag);
   $("#count").textContent=list.length+" / "+IDS.length;
-  if(!list.length)$("#grid").innerHTML='<div class="empty">找不到結果</div>';
+  if(!list.length)$("#grid").innerHTML='<div class="empty">'+T("none")+'</div>';
 }
 function showDetail(id){
   const i=IDS.indexOf(id);
   const prev=IDS[i-1],next=IDS[i+1];
   const d=$("#detail");d.replaceChildren();
   const nav=document.createElement("div");nav.className="nav";
-  nav.innerHTML='<a href="#">← 返回列表</a>';
+  nav.innerHTML='<a href="#">'+T("back")+'</a>';
   const r=document.createElement("span");
   if(prev!=null)r.innerHTML+='<a href="#'+prev+'">‹ '+nameOf(prev).replace(/</g,"&lt;")+'</a>　';
   if(next!=null)r.innerHTML+='<a href="#'+next+'">'+nameOf(next).replace(/</g,"&lt;")+' ›</a>';
@@ -106,52 +118,81 @@ function showDetail(id){
   const st=document.createElement("div");st.className="story";st.innerHTML=fmt(STORIES[id]);
   const nav2=nav.cloneNode(true);nav2.classList.add("bottom");
   d.append(nav,hd,st,nav2);
-  document.title=nameOf(id)+" - 神魔故事";
+  document.title=nameOf(id)+" - "+T("title");
 }
 function route(){
   const h=location.hash.slice(1);
   const id=/^\d+$/.test(h)?Number(h):null;
+  const wasDetail=!$("#detail").hidden;
   if(id!=null&&STORIES[id]!=null){
     if(!$("#home").hidden)savedY=window.scrollY;
-    $("#home").hidden=true;$("#detail").hidden=false;$(".count").hidden=true;$("#q").hidden=true;
+    $("#home").hidden=true;$("#detail").hidden=false;$("#count").hidden=true;$("#q").hidden=true;
     showDetail(id);window.scrollTo(0,0);
   }else{
-    $("#home").hidden=false;$("#detail").hidden=true;$(".count").hidden=false;$("#q").hidden=false;
-    document.title="神魔故事";
-    window.scrollTo(0,savedY);
+    // 目前語言沒有這篇故事時，清掉網址的 #id 回到列表
+    if(id!=null)history.replaceState(null,"",location.pathname+location.search);
+    $("#home").hidden=false;$("#detail").hidden=true;$("#count").hidden=false;$("#q").hidden=false;
+    document.title=T("title");
+    if(wasDetail)window.scrollTo(0,savedY);
   }
 }
 $("#q").addEventListener("input",applyFilter);
 addEventListener("hashchange",()=>{if(IDS.length)route()});
 
 // ---- 從 JSON 載入資料 ----
-function loadData(story,monster){
-  STORIES={};NAMES={};
+function parseData(story,monster){
+  const S={},N={};
   for(const k in story){
     const m=/^STORY_(\d+)$/.exec(k);
-    if(m&&typeof story[k]==="string"&&story[k].trim())STORIES[m[1]]=story[k];
+    if(m&&typeof story[k]==="string"&&story[k].trim())S[m[1]]=story[k];
   }
-  for(const id in STORIES){
+  for(const id in S){
     const v=monster["MONSTER_"+id];
-    if(typeof v==="string")NAMES[id]=v;
+    if(typeof v==="string")N[id]=v;
   }
-  IDS=Object.keys(STORIES).map(Number).sort((a,b)=>a-b);
-  list=IDS;
-  $("#loader").hidden=true;
-  applyFilter();route();
+  return {S,N,IDS:Object.keys(S).map(Number).sort((a,b)=>a-b)};
 }
 async function fetchJson(u){
   const r=await fetch(u);
   if(!r.ok)throw new Error(u+" "+r.status);
   return r.json();
 }
-(async()=>{
-  try{
-    const [s,m]=await Promise.all([fetchJson(STORY_URL),fetchJson(MONSTER_URL)]);
-    loadData(s,m);
-  }catch(e){
-    $("#loadmsg").textContent="無法讀取 "+STORY_URL+" / "+MONSTER_URL+"："+e.message+"。請確認兩個 JSON 與本檔放在同一位置，並透過網頁伺服器（http）開啟。";
+function applyUI(){
+  document.documentElement.lang=T("html");
+  $("#title").textContent=T("title");
+  $("#q").placeholder=T("search");
+  $("#lang").value=LANG;
+  try{localStorage.setItem("lang",LANG)}catch(e){}
+}
+async function setLang(l){
+  const prev=LANG;
+  const L=LANGS[l];
+  if(!DATA[l]){
+    $("#loadmsg").textContent=LANGS[l].loading;$("#loader").hidden=false;
+    try{
+      const [s,m]=await Promise.all([fetchJson(L.story),fetchJson(L.monster)]);
+      DATA[l]=parseData(s,m);
+    }catch(e){
+      if(DATA[prev]){            // 切換失敗：退回原本的語言
+        $("#loader").hidden=true;$("#lang").value=prev;
+        alert(L.fail+" "+L.story+" / "+L.monster+"\n"+e.message);
+      }else{                     // 初次載入失敗
+        $("#loadmsg").textContent=L.fail+" "+L.story+" / "+L.monster+"："+e.message+" "+L.hint;
+      }
+      return false;
+    }
   }
+  $("#loader").hidden=true;
+  LANG=l;({S:STORIES,N:NAMES,IDS}=DATA[l]);
+  applyUI();applyFilter();route();
+  return true;
+}
+$("#lang").addEventListener("change",e=>setLang(e.target.value));
+(async()=>{
+  let l="zh";
+  try{const s=localStorage.getItem("lang");if(LANGS[s])l=s}catch(e){}
+  LANG=l;$("#lang").value=l;$("#q").placeholder=T("search");
+  if(!await setLang(l)&&l!=="zh")await setLang("zh");
 })();
 </script>
 </body>
