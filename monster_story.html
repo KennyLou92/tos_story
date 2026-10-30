@@ -21,6 +21,7 @@ header .count{color:var(--sub);font-size:.85rem}
 .item .nm{font-size:.82rem;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 #detail{max-width:760px;margin:0 auto;padding:16px 16px 48px}
 .nav{display:flex;justify-content:space-between;gap:8px;margin-bottom:16px}
+.nav.bottom{margin:16px 0 0}
 .nav a{color:var(--accent);text-decoration:none;font-size:.95rem}
 .hd{display:flex;gap:16px;align-items:center;margin-bottom:16px}
 .hd img{width:96px;height:96px;border-radius:12px;background:var(--line)}
@@ -103,7 +104,8 @@ function showDetail(id){
   const s=document.createElement("div");s.className="sid";s.textContent="MONSTER_"+id+" ／ STORY_"+id;
   box.append(h,s);hd.append(img,box);
   const st=document.createElement("div");st.className="story";st.innerHTML=fmt(STORIES[id]);
-  d.append(nav,hd,st);
+  const nav2=nav.cloneNode(true);nav2.classList.add("bottom");
+  d.append(nav,hd,st,nav2);
   document.title=nameOf(id)+" - 神魔故事";
 }
 function route(){
