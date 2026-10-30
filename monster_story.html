@@ -113,7 +113,7 @@ function showDetail(id){
   const img=document.createElement("img");img.src=icon(id);img.alt=nameOf(id);img.onerror=()=>{img.style.visibility="hidden"};
   const box=document.createElement("div");
   const h=document.createElement("h2");h.textContent=nameOf(id);
-  const s=document.createElement("div");s.className="sid";s.textContent="MONSTER_"+id+" ／ STORY_"+id;
+  const s=document.createElement("div");s.className="sid";s.textContent="No."+id;
   box.append(h,s);hd.append(img,box);
   const st=document.createElement("div");st.className="story";st.innerHTML=fmt(STORIES[id]);
   const nav2=nav.cloneNode(true);nav2.classList.add("bottom");
