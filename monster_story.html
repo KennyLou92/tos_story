@@ -23,7 +23,9 @@ header .count{color:var(--sub);font-size:.85rem}
 #detail{max-width:760px;margin:0 auto;padding:16px 16px 48px}
 .nav{display:flex;justify-content:space-between;gap:8px;margin-bottom:16px}
 .nav.bottom{margin:16px 0 0}
-.nav a{color:var(--accent);text-decoration:none;font-size:.95rem}
+.nav a{color:var(--accent);text-decoration:none;font-size:.95rem;display:inline-flex;align-items:center;gap:6px}
+.nav .pn{display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:flex-end;align-items:center}
+.nav img{width:28px;height:28px;border-radius:6px;object-fit:cover;background:var(--line)}
 .hd{display:flex;gap:16px;align-items:center;margin-bottom:16px}
 .hd img{width:96px;height:96px;border-radius:12px;background:var(--line)}
 .hd h2{margin:0;font-size:1.4rem}
@@ -105,9 +107,17 @@ function showDetail(id){
   const d=$("#detail");d.replaceChildren();
   const nav=document.createElement("div");nav.className="nav";
   nav.innerHTML='<a href="#">'+T("back")+'</a>';
-  const r=document.createElement("span");
-  if(prev!=null)r.innerHTML+='<a href="#'+prev+'">‹ '+nameOf(prev).replace(/</g,"&lt;")+'</a>　';
-  if(next!=null)r.innerHTML+='<a href="#'+next+'">'+nameOf(next).replace(/</g,"&lt;")+' ›</a>';
+  const r=document.createElement("span");r.className="pn";
+  const link=(tid,isPrev)=>{
+    const a=document.createElement("a");a.href="#"+tid;
+    const im=document.createElement("img");im.src=icon(tid);im.alt="";im.loading="lazy";im.onerror=()=>im.remove();
+    const nm=document.createElement("span");nm.textContent=nameOf(tid);
+    const ar=document.createElement("span");ar.textContent=isPrev?"‹":"›";
+    a.append(...(isPrev?[ar,im,nm]:[nm,im,ar]));
+    return a;
+  };
+  if(prev!=null)r.append(link(prev,true));
+  if(next!=null)r.append(link(next,false));
   nav.append(r);
   const hd=document.createElement("div");hd.className="hd";
   const img=document.createElement("img");img.src=icon(id);img.alt=nameOf(id);img.onerror=()=>{img.style.visibility="hidden"};
